@@ -26,7 +26,7 @@ export default {
                 {
                   buildHookId: "5f369a6b9522444e8fcc6d8c",
                   title: "Portfolio Website",
-                  name: "alexbucklee-web",
+                  name: "alexbucklee",
                   apiId: "60a41f54-5ced-41fd-9e7b-703f8cfb9638"
                 }
               ]
@@ -41,7 +41,7 @@ export default {
           },
           {
             title: "Frontend",
-            value: "https://alexbucklee-web.netlify.app",
+            value: "https://alexbucklee.netlify.app",
             category: "apps"
           }
         ]
