@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
+const Header = ({ siteTitle }) => (
   <div>
     <div>
       <div>
@@ -9,6 +9,15 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
       </div>
       <nav>
         <ul>
+          <li>
+            <Link to="/art/">Art</Link>
+          </li>
+          <li>
+            <Link to="/design/">Design</Link>
+          </li>
+          <li>
+            <Link to="/about/">About</Link>
+          </li>
           <li>
             <Link to="/archive/">Archive</Link>
           </li>
