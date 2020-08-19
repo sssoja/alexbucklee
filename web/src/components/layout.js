@@ -1,14 +1,14 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
-import "../styles/reset.css";
-import GlobalStyle from "../styles/global-style";
+// import { ThemeProvider } from "styled-components";
+// import theme from "../styles/theme";
+// import GlobalStyle from "../styles/global-style";
 import Header from "./header";
 
 const Layout = ({ children, siteTitle }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Header siteTitle={siteTitle} />
+  // <ThemeProvider theme={theme}>
+  // {/* <GlobalStyle /> */}
+  <>
+    <Header siteTitle={siteTitle}></Header>
     <div>{children}</div>
     <footer>
       <div>
@@ -19,7 +19,8 @@ const Layout = ({ children, siteTitle }) => (
         </div>
       </div>
     </footer>
-  </ThemeProvider>
+  </>
+  // {/* </ThemeProvider> */}
 );
 
 export default Layout;
