@@ -1,11 +1,11 @@
-.root {
+/* .root {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
 .title {
-  composes: responsiveTitle1 from './typography.module.css';
+  composes: responsiveTitle1 from "./typography.module.css";
 }
 
 .leadMediaThumb {
@@ -39,4 +39,4 @@
   @nest & strong {
     font-weight: 600;
   }
-}
+} */
