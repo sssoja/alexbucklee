@@ -1,41 +1,47 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import { color, space, flexbox } from "styled-system";
+import { flexbox, layout, typography } from "styled-system";
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.header``;
+
+const NavMenu = styled.ul`
   display: flex;
-  width: 100%;
-  ${space};
   ${flexbox};
+  ${layout};
 `;
 
 const StyledLink = styled(Link)`
-  ${color}
+  ${layout};
+  ${flexbox};
+  ${typography};
+  &:hover {
+    color: #ffff00;
 `;
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <StyledLink to="/">{siteTitle}</StyledLink>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/art/">Art</Link>
-        </li>
-        <li>
-          <Link to="/design/">Design</Link>
-        </li>
-        <li>
-          <Link to="/about/">About</Link>
-        </li>
-        <li>
-          <Link to="/archive/">Archive</Link>
-        </li>
-        <li>
-          <Link to="/contact/">Contact</Link>
-        </li>
-      </ul>
-    </nav>
+    <NavMenu flexDirection="row" justifyContent="space-between">
+      <StyledLink to="/" maxWidth="11%" flexWrap="wrap">
+        {siteTitle}
+      </StyledLink>
+
+      <li>
+        <StyledLink to="/art/">Art</StyledLink>
+      </li>
+      <li>
+        <StyledLink to="/design/">Design</StyledLink>
+      </li>
+      <li>
+        <StyledLink to="/about/">About</StyledLink>
+      </li>
+      <li>
+        <StyledLink to="/archive/">Archive</StyledLink>
+      </li>
+      <li>
+        <StyledLink to="/contact/">Contact</StyledLink>
+      </li>
+    </NavMenu>
   </HeaderWrapper>
 );
 
