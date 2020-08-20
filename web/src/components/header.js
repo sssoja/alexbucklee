@@ -19,7 +19,21 @@ const Header = ({ siteTitle }) => (
     <StyledLink to="/">{siteTitle}</StyledLink>
     <nav>
       <ul>
-        <li>About</li>
+        <li>
+          <Link to="/art/">Art</Link>
+        </li>
+        <li>
+          <Link to="/design/">Design</Link>
+        </li>
+        <li>
+          <Link to="/about/">About</Link>
+        </li>
+        <li>
+          <Link to="/archive/">Archive</Link>
+        </li>
+        <li>
+          <Link to="/contact/">Contact</Link>
+        </li>
       </ul>
     </nav>
   </HeaderWrapper>
