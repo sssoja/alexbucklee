@@ -41,7 +41,7 @@ export default {
           },
           {
             title: "Frontend",
-            value: "https://alexbucklee.netlify.app",
+            value: "https://alexbucklee.com",
             category: "apps"
           }
         ]
