@@ -8,7 +8,7 @@ function RoleList({ items, title }) {
     <div>
       <h2>{title}</h2>
       <ul>
-        {items.map((item) => (
+        {items.map(item => (
           <li key={item._key}>
             <div>
               <div>

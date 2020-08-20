@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /* @import "../styles/custom-properties.css";
+||||||| merged common ancestors
+@import '../styles/custom-properties.css';
+=======
+/* @import '../styles/custom-properties.css';
+>>>>>>> 03413712419ef414ad5a43bba86262545f7725db
 
 .root {
   margin: 2rem 0 3rem;

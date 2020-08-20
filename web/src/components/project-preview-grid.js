@@ -8,7 +8,7 @@ function ProjectPreviewGrid(props) {
       {props.title && <h2>{props.title}</h2>}
       <ul>
         {props.nodes &&
-          props.nodes.map((node) => (
+          props.nodes.map(node => (
             <li key={node.id}>
               <ProjectPreview {...node} />
             </li>
@@ -26,7 +26,7 @@ function ProjectPreviewGrid(props) {
 ProjectPreviewGrid.defaultProps = {
   title: "",
   nodes: [],
-  browseMoreHref: "",
+  browseMoreHref: ""
 };
 
 export default ProjectPreviewGrid;

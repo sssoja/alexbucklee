@@ -42,7 +42,7 @@ function Project(props) {
               <div>
                 <h3>Categories</h3>
                 <ul>
-                  {categories.map((category) => (
+                  {categories.map(category => (
                     <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>
@@ -52,7 +52,7 @@ function Project(props) {
               <div>
                 <h3>Related projects</h3>
                 <ul>
-                  {relatedProjects.map((project) => (
+                  {relatedProjects.map(project => (
                     <li key={`related_${project._id}`}>
                       {project.slug ? (
                         <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
