@@ -14,6 +14,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-global-styles": "^1.0.17",
     "lerna": "^3.13.1"
+  },
+  "dependencies": {
+    "@nfront/global-styles": "^1.2.1"
   }
 }

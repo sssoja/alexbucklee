@@ -1,11 +1,10 @@
 import React from "react";
 import Header from "./header";
-
-import "../styles/layout.css";
-import "../styles/reset.css";
+import GlobalStyle from "../styles/global-style";
 
 const Layout = ({ children, siteTitle }) => (
   <>
+    <GlobalStyle />
     <Header siteTitle={siteTitle} />
     <div>{children}</div>
     <footer>

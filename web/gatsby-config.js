@@ -1,6 +1,6 @@
 // Load variables from `.env` as soon as possible
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "development"}`,
+  path: `.env.${process.env.NODE_ENV || "development"}`
 });
 
 const clientConfig = require("./client-config");
@@ -19,8 +19,8 @@ module.exports = {
         ...clientConfig.sanity,
         token,
         watchMode: !isProd,
-        overlayDrafts: !isProd && token,
-      },
-    },
-  ],
+        overlayDrafts: !isProd && token
+      }
+    }
+  ]
 };
