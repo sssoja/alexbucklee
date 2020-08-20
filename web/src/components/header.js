@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import { flexbox, layout, typography } from "styled-system";
+import { flexbox, layout, typography, space } from "styled-system";
 
 const HeaderWrapper = styled.header``;
 
@@ -9,20 +9,25 @@ const NavMenu = styled.ul`
   display: flex;
   ${flexbox};
   ${layout};
+  ${space};
+  ${typography};
 `;
 
 const StyledLink = styled(Link)`
   ${layout};
   ${flexbox};
   ${typography};
+  ${space}
   &:hover {
     color: #ffff00;
 `;
 
+const fontSizes = [0, 1, 2, 3];
+
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <NavMenu flexDirection="row" justifyContent="space-between">
-      <StyledLink to="/" maxWidth="11%" flexWrap="wrap">
+    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={fontSizes} mb={4}>
+      <StyledLink to="/" flexWrap="wrap" flexDirection={["row", "column"]} width="12%">
         {siteTitle}
       </StyledLink>
 
@@ -35,9 +40,7 @@ const Header = ({ siteTitle }) => (
       <li>
         <StyledLink to="/about/">About</StyledLink>
       </li>
-      <li>
-        <StyledLink to="/archive/">Archive</StyledLink>
-      </li>
+
       <li>
         <StyledLink to="/contact/">Contact</StyledLink>
       </li>

@@ -3,13 +3,13 @@ import theme from "./theme";
 import reset from "./reset";
 
 const GlobalStyle = createGlobalStyle`
-${reset}
+${reset} 
   body {
     font-family: "Helvetica Neue";
     text-decoration: none;
     color: ${theme.colors.athensGray};
     background: ${theme.colors.black};
-    padding: 0;
+    padding: 24px;
     margin: 0;
   }
   a {
