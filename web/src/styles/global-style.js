@@ -8,7 +8,7 @@ ${reset}
     font-family: "Helvetica Neue";
     text-decoration: none;
     color: ${theme.colors.athensGray};
-    background: ${theme.colors.black};
+    // background: ${theme.colors.black}; 
     padding: 24px;
     margin: 0;
   }
@@ -21,3 +21,6 @@ ${reset}
     list-style-type: none;
 `;
 export default GlobalStyle;
+
+// Blue background
+// #0000ff
