@@ -27,7 +27,7 @@ const fontSizes = [1, 2, 3, 4];
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <NavMenu flexDirection="row" justifyContent="space-between" fontSize={fontSizes} mb={4}>
-      <StyledLink to="/" flexWrap="wrap" flexDirection={["row", "column"]} width="12%">
+      <StyledLink to="/" flexWrap="wrap" flexDirection={["row", "column"]} width="14%">
         {siteTitle}
       </StyledLink>
 
