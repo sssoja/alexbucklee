@@ -8,7 +8,6 @@ const HeaderWrapper = styled.header``;
 const NavMenu = styled.ul`
   display: flex;
   ${flexbox};
-  ${layout};
   ${space};
   ${typography};
 `;
@@ -16,8 +15,6 @@ const NavMenu = styled.ul`
 const StyledLink = styled(Link)`
   ${layout};
   ${flexbox};
-  ${typography};
-  ${space}
   &:hover {
     color: #ffff00;
 `;
@@ -27,7 +24,7 @@ const fontSizes = [1, 2, 3, 4];
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <NavMenu flexDirection="row" justifyContent="space-between" fontSize={fontSizes} mb={4}>
-      <StyledLink to="/" flexWrap="wrap" flexDirection={["row", "column"]} width="14%">
+      <StyledLink to="/" flexWrap="wrap" flexDirection="row" width="14%">
         {siteTitle}
       </StyledLink>
 
@@ -40,7 +37,6 @@ const Header = ({ siteTitle }) => (
       <li>
         <StyledLink to="/about/">About</StyledLink>
       </li>
-
       <li>
         <StyledLink to="/contact/">Contact</StyledLink>
       </li>

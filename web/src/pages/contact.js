@@ -17,20 +17,17 @@ const ContactPage = props => {
 
   const ListWrapper = styled.div`
     ${grid};
-    ${typography};
-    ${flexbox};
     ${layout};
-    ${space};
+    ${typography};
   `;
 
   const H1 = styled.h1`
-    ${typography};
     ${space};
+    ${grid};
   `;
 
   const ContactInfo = styled.p`
     ${grid};
-    ${typography};
   `;
 
   const fontSizes = [1, 2, 3, 4];
@@ -44,31 +41,21 @@ const ContactPage = props => {
           gridRowGap={3}
           gridColumnGap={4}
           maxWidth="50%"
+          fontSize={fontSizes}
         >
-          {" "}
-          <H1 fontSize={fontSizes} gridRow={1} mt={4}>
+          <H1 gridRow={1} mt={4}>
             Let's chat...
           </H1>
-          <ContactInfo fontSize={fontSizes} gridRow={2}>
-            Email{" "}
-          </ContactInfo>
-          <ContactInfo fontSize={fontSizes} gridRow={2}>
+          <ContactInfo gridRow={2}>Email </ContactInfo>
+          <ContactInfo gridRow={2}>
             <a href="mailto:alexbucklee@gmail.com" target="_blank">
               alexbucklee@gmail.com
             </a>
           </ContactInfo>
-          <ContactInfo fontSize={fontSizes} gridRow={3}>
-            Mobile
-          </ContactInfo>
-          <ContactInfo fontSize={fontSizes} gridRow={3}>
-            +44 7768 619 885
-          </ContactInfo>
-          <ContactInfo fontSize={fontSizes} gridRow={4}>
-            Instagram
-          </ContactInfo>
-          <ContactInfo fontSize={fontSizes} gridRow={4}>
-            @alexbucklee
-          </ContactInfo>
+          <ContactInfo gridRow={3}>Mobile</ContactInfo>
+          <ContactInfo gridRow={3}>+44 7768 619 885</ContactInfo>
+          <ContactInfo gridRow={4}>Instagram</ContactInfo>
+          <ContactInfo gridRow={4}>@alexbucklee</ContactInfo>
         </ListWrapper>
       </Container>
     </Layout>
