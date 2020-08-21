@@ -22,7 +22,7 @@ const StyledLink = styled(Link)`
     color: #ffff00;
 `;
 
-const fontSizes = [0, 1, 2, 3];
+const fontSizes = [1, 2, 3, 4];
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
