@@ -3,9 +3,25 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import styled from "styled-components";
-import { space, typography, layout, flexbox, grid } from "styled-system";
+import { space, typography, layout, grid } from "styled-system";
+
+const ListWrapper = styled.div`
+  ${grid};
+  ${layout};
+  ${typography};
+`;
+
+const H1 = styled.h1`
+  ${space};
+  ${grid};
+`;
+
+const ContactInfo = styled.p`
+  ${grid};
+`;
 
 const ContactPage = props => {
+  const fontSizes = [1, 2, 3, 4];
   const { errors } = props;
   if (errors) {
     return (
@@ -14,23 +30,6 @@ const ContactPage = props => {
       </Layout>
     );
   }
-
-  const ListWrapper = styled.div`
-    ${grid};
-    ${layout};
-    ${typography};
-  `;
-
-  const H1 = styled.h1`
-    ${space};
-    ${grid};
-  `;
-
-  const ContactInfo = styled.p`
-    ${grid};
-  `;
-
-  const fontSizes = [1, 2, 3, 4];
 
   return (
     <Layout>
