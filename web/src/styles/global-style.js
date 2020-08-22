@@ -8,19 +8,18 @@ ${reset}
     font-family: "Helvetica Neue";
     text-decoration: none;
     color: ${theme.colors.athensGray};
-    background: ${theme.colors.black}; 
+    background: ${theme.colors.black};
     padding: 24px;
-    margin: 0;
+    margin: 0px;
   }
   a {
     text-decoration: none;
     color: ${theme.colors.athensGray};
+    &:hover {
+      color: #ffff00;
   }
   ul {
-    margin: 0 auto;
+    margin: 0px;
     list-style-type: none;
 `;
 export default GlobalStyle;
-
-// Blue background
-// #0000ff

@@ -15,15 +15,13 @@ const NavMenu = styled.ul`
 const StyledLink = styled(Link)`
   ${layout};
   ${flexbox};
-  &:hover {
-    color: #ffff00;
 `;
 
 const fontSizes = [1, 2, 3, 4];
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={fontSizes} mb={4}>
+    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={fontSizes} pb={5}>
       <StyledLink to="/" flexWrap="wrap" flexDirection="row" width="14%">
         {siteTitle}
       </StyledLink>
