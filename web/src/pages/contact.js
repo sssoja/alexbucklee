@@ -37,9 +37,9 @@ const ContactPage = props => {
         <ListWrapper
           display="grid"
           gridTemplateRows="1f, 1fr, 1fr, 1fr"
-          gridRowGap={3}
+          gridRowGap={1}
           gridColumnGap={4}
-          maxWidth="50%"
+          maxWidth="55%"
           fontSize={fontSizes}
         >
           <H1 gridRow={1} mt={4}>
