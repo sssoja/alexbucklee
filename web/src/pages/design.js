@@ -7,7 +7,7 @@ import {
 } from "../lib/helpers";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
-import ProjectPreviewGrid from "../components/project-preview-grid";
+import ProjectPreviewGridDesign from "../components/project-preview-grid-design";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
@@ -88,7 +88,7 @@ const DesignworkPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         {projectNodes && (
-          <ProjectPreviewGrid
+          <ProjectPreviewGridDesign
             title="Design works"
             nodes={projectNodes}
             browseMoreHref="/archive/"
