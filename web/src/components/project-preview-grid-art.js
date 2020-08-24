@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 
 const GridWrapper = styled.div`
+  height: 100vh;
   ${typography};
   ${flexbox};
   ${layout};
