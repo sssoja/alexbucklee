@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React, { Fragment } from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
