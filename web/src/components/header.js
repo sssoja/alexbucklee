@@ -17,7 +17,7 @@ const StyledLink = styled(Link)`
   ${flexbox};
 `;
 
-const fontSizes = [1, 2, 3, 4];
+const fontSizes = [0, 1, 2, 3];
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>

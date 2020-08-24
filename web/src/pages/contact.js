@@ -21,7 +21,7 @@ const ContactInfo = styled.p`
 `;
 
 const ContactPage = props => {
-  const fontSizes = [1, 2, 3, 4];
+  const fontSizes = [0, 1, 2, 3];
   const { errors } = props;
   if (errors) {
     return (

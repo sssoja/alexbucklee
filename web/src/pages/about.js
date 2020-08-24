@@ -22,7 +22,7 @@ const Paragraph = styled.p`
 `;
 
 const AboutPage = props => {
-  const fontSizes = [1, 2, 3, 4];
+  const fontSizes = [0, 1, 2, 3];
   const { errors } = props;
   if (errors) {
     return (
