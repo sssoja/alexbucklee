@@ -9,7 +9,7 @@ ${reset}
     text-decoration: none;
     color: ${theme.colors.athensGray};
     background: ${theme.colors.black};
-    padding: 24px;
+    padding: 32px;
     margin: 0px;
   }
   a {
