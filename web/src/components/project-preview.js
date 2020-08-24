@@ -8,12 +8,7 @@ function ProjectPreview(props) {
     <Fragment>
       <div>
         {props.mainImage && props.mainImage.asset && (
-          <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
-              .width(600)
-              .height(Math.floor((9 / 16) * 600))}
-            alt={props.mainImage.alt}
-          />
+          <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
         )}
       </div>
       <h3>{props.title}</h3>
