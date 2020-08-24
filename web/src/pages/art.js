@@ -8,16 +8,10 @@ import {
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import ProjectPreviewGridArt from "../components/project-preview-grid-art";
-import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
 export const query = graphql`
   query ArtPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
     projects: allSanityArt(
       limit: 8
       sort: { fields: [publishedAt], order: DESC }
@@ -70,26 +64,19 @@ const ArtworkPage = props => {
     );
   }
 
-  const site = (data || {}).site;
   const projectNodes = (data || {}).projects
     ? mapEdgesToNodes(data.projects)
         .filter(filterOutDocsWithoutSlugs)
         .filter(filterOutDocsPublishedInTheFuture)
     : [];
 
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    );
-  }
-
   return (
     <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         {projectNodes && (
           <ProjectPreviewGridArt
             title="Art works"
+            subtitle="(some of which can be purchased here)"
             nodes={projectNodes}
             browseMoreHref="/archive/"
           />
