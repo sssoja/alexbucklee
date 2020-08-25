@@ -42,9 +42,10 @@ const ContactPage = props => {
           maxWidth="55%"
           fontSize={fontSizes}
         >
-          <H1 gridRow={1} mt={4}>
+          <H1 gridRow={1} mt={4} mb={3}>
             Let's chat...
           </H1>
+
           <ContactInfo gridRow={2}>Email </ContactInfo>
           <ContactInfo gridRow={2}>
             <a href="mailto:alexbucklee@gmail.com" target="_blank">
