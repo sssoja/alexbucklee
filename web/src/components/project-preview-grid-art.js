@@ -1,9 +1,9 @@
-import { Link } from "gatsby";
 import React from "react";
-import ProjectPreview from "./project-preview";
+import ProjectPreviewArt from "./project-preview-art";
 import styles from "./project-preview-grid-art.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
+import ProjectPreviewArt from "./project-preview-art";
 
 const GridWrapper = styled.div`
   height: 100vh;
@@ -11,6 +11,7 @@ const GridWrapper = styled.div`
   ${flexbox};
   ${layout};
   ${grid};
+  ${space};
 `;
 
 const Column = styled.div`
@@ -32,30 +33,35 @@ function ProjectPreviewGridArt(props) {
   return (
     <GridWrapper
       gridTemplateColumns="20%"
-      gridTemplateRows="repeat(2, 1fr)"
       display={["flex", "grid"]}
       flexDirection="column"
       fontSize={fontSizes}
     >
-      <Column gridRow={1} gridColumn={1} display="flex" flexDirection="column">
+      <Column gridColumn={1} display="flex" flexDirection="column" mr={4}>
         {props.title && <h2>{props.title}</h2>}
         {props.subtitle && <h3>{props.subtitle}</h3>}
       </Column>
-      <Column gridRow={1} gridColumn={2} pb={4}>
-        <ul className={styles.grid}>
-          {props.nodes &&
-            props.nodes.map(node => (
-              <li key={node.id}>
-                <ProjectPreview {...node} />
-              </li>
-            ))}
-        </ul>
-      </Column>
-      <Row gridRow={2} gridColumn={1}>
-        <h4>Represented by:</h4>{" "}
+      <Row gridColumn={2} pb={4}>
+        <Column className={styles.grid}>
+          <Column className={styles.grid}>
+            <ul>
+              {props.nodes &&
+                props.nodes.map(node => (
+                  <li key={node.id}>
+                    <ProjectPreviewArt {...node} />
+                  </li>
+                ))}
+            </ul>
+          </Column>
+        </Column>
       </Row>
-      <Row gridRow={2} gridColumn={2}>
-        <h4>Atom Gallery, The Art Hound Gallery, Subversion Gallery</h4>{" "}
+      <Row display="contents">
+        <Row gridColumn={1}>
+          <h4>Represented by:</h4>{" "}
+        </Row>
+        <Row gridColumn={2}>
+          <h4>Atom Gallery, The Art Hound Gallery, Subversion Gallery</h4>{" "}
+        </Row>
       </Row>
     </GridWrapper>
   );
