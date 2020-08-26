@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectPreviewArt from "./project-preview-art";
 import styles from "./project-preview-grid-art.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
@@ -7,6 +6,7 @@ import ProjectPreviewArt from "./project-preview-art";
 
 const GridWrapper = styled.div`
   height: 100vh;
+  overflow: hidden;
   ${typography};
   ${flexbox};
   ${layout};
@@ -33,6 +33,7 @@ function ProjectPreviewGridArt(props) {
   return (
     <GridWrapper
       gridTemplateColumns="20%"
+      gridTemplateRows="80%"
       display={["flex", "grid"]}
       flexDirection="column"
       fontSize={fontSizes}

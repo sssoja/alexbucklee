@@ -17,6 +17,7 @@
 .grid {
   @media (min-width: 450px) {
     column-count: 2;
+    overflow: scroll;
   }
 }
 
