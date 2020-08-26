@@ -17,8 +17,21 @@
 .grid {
   @media (min-width: 450px) {
     column-count: 2;
+  }
+}
+
+.scroll {
+  @media (min-width: 450px) {
     overflow: scroll;
   }
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.border {
+  box-shadow: inset 5px 10px #888888;
 }
 
 .landscape {
