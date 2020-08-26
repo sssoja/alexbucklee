@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import ProjectPreview from "./project-preview";
+import ProjectPreviewArt from "./project-preview-art";
 
 function ProjectPreviewGrid(props) {
   return (
@@ -10,7 +10,7 @@ function ProjectPreviewGrid(props) {
         {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
-              <ProjectPreview {...node} />
+              <ProjectPreviewArt {...node} />
             </li>
           ))}
       </ul>

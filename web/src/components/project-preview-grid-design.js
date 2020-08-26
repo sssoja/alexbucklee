@@ -1,11 +1,11 @@
 import React from "react";
-import ProjectPreview from "./project-preview";
 import styles from "./project-preview-grid-design.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
+import ProjectPreviewDesign from "./project-preview-design";
 
 const GridWrapper = styled.div`
-  height: 100vh;
+  height: 80vh;
   ${typography};
   ${flexbox};
   ${layout};
@@ -31,29 +31,38 @@ function ProjectPreviewGridDesign(props) {
   return (
     <GridWrapper
       gridTemplateColumns="20%"
-      gridTemplateRows="repeat(2, 1fr)"
+      gridTemplateRows="90%"
       display={["flex", "grid"]}
       flexDirection="column"
       fontSize={fontSizes}
     >
-      <Column gridRow={1} gridColumn={1} display="flex" flexDirection="column">
+      <Column gridColumn={1} display="flex" flexDirection="column" mr={4}>
         {props.title && <h2>{props.title}</h2>}
+        {props.subtitle && <h3>{props.subtitle}</h3>}
       </Column>
-      <Column gridRow={1} gridColumn={2} pb={4}>
-        <ul className={styles.grid}>
-          {props.nodes &&
-            props.nodes.map(node => (
-              <li key={node.id}>
-                <ProjectPreview {...node} />
-              </li>
-            ))}
-        </ul>
-      </Column>
-      <Row gridRow={2} gridColumn={1}>
-        <h4>Employer:</h4>{" "}
+
+      <Row gridColumn={2} pb={4} className={styles.scroll}>
+        <Column className={styles.grid}>
+          <Column className={styles.grid}>
+            <ul>
+              {props.nodes &&
+                props.nodes.map(node => (
+                  <li key={node.id} className={styles.listItem}>
+                    <ProjectPreviewDesign {...node} />
+                  </li>
+                ))}
+            </ul>
+          </Column>
+        </Column>
       </Row>
-      <Row gridRow={2} gridColumn={2}>
-        <h4>Freelance, Fearlessly Frank</h4>{" "}
+
+      <Row display="contents">
+        <Row gridColumn={1}>
+          <h4>Employer:</h4>{" "}
+        </Row>
+        <Row gridColumn={2}>
+          <h4>Freelance, Fearlessly Frank</h4>{" "}
+        </Row>
       </Row>
     </GridWrapper>
   );

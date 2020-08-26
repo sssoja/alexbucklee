@@ -19,7 +19,7 @@ export const query = graphql`
       keywords
     }
     projects: allSanityDesign(
-      limit: 4
+      limit: 12
       sort: { fields: [publishedAt], order: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
@@ -45,6 +45,12 @@ export const query = graphql`
             }
             asset {
               _id
+              metadata {
+                dimensions {
+                  width
+                  height
+                }
+              }
             }
             alt
           }

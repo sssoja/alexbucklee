@@ -15,16 +15,38 @@
 } */
 
 .grid {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2em;
-
   @media (min-width: 450px) {
-    grid-template-columns: 1fr 1fr;
+    column-count: 2;
+    gap: 15px;
   }
+}
+
+.landscape {
+  @media (min-width: 450px) {
+    column-span: all;
+  }
+}
+
+.landscape:hover {
+  height: auto;
+  opacity: 1;
+  transition: 0.1s ease;
+  background-color: yellow;
+  color: blue;
+}
+
+.listItem {
+  @media (min-width: 450px) {
+    padding-top: 5px;
+  }
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
 }
 
 /* .browseMoreNav {
