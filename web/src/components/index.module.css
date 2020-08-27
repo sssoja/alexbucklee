@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+}
+
+.h1 {
+  display: block;
+  width: 100%;
+}
+
+.gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.gif:hover {
+  opacity: 1;
+}
