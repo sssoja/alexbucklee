@@ -1,15 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from "../lib/helpers";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
-import ProjectPreviewGrid from "../components/project-preview-grid";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
+import styled from "styled-components";
+import { typography, flexbox } from "styled-system";
 
 export const query = graphql`
   query IndexPageQuery {
@@ -18,49 +14,19 @@ export const query = graphql`
       description
       keywords
     }
-    projects: allSanitySampleProject(
-      limit: 8
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          mainImage {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
-            asset {
-              _id
-            }
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
   }
+`;
+
+const Wrapper = styled.div`
+  height: 80vh;
+  display: flex;
+  ${typography};
+  ${flexbox};
 `;
 
 const IndexPage = props => {
   const { data, errors } = props;
+  const fontSizes = [3, 4, 5, 6];
 
   if (errors) {
     return (
@@ -71,11 +37,6 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site;
-  const projectNodes = (data || {}).projects
-    ? mapEdgesToNodes(data.projects)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
-    : [];
 
   if (!site) {
     throw new Error(
@@ -87,14 +48,14 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {projectNodes && (
-          <ProjectPreviewGrid
-            title="Latest projects"
-            nodes={projectNodes}
-            browseMoreHref="/archive/"
-          />
-        )}
+        <Wrapper
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          fontSize={fontSizes}
+        >
+          <h1>WINDOW OF OPPORTUNITY </h1>
+        </Wrapper>
       </Container>
     </Layout>
   );
