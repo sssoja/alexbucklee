@@ -1,17 +1,15 @@
 import React from "react";
-import styles from "./project-preview-grid-art.module.css";
+import styles from "./project-preview-grid-design.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 import ProjectPreviewArt from "./project-preview-art";
 
 const GridWrapper = styled.div`
-  height: 100vh;
-  overflow: hidden;
+  height: 80vh;
   ${typography};
   ${flexbox};
   ${layout};
   ${grid};
-  ${space};
 `;
 
 const Column = styled.div`
@@ -33,7 +31,7 @@ function ProjectPreviewGridArt(props) {
   return (
     <GridWrapper
       gridTemplateColumns="20%"
-      gridTemplateRows="80%"
+      gridTemplateRows="90%"
       display={["flex", "grid"]}
       flexDirection="column"
       fontSize={fontSizes}
@@ -42,13 +40,14 @@ function ProjectPreviewGridArt(props) {
         {props.title && <h2>{props.title}</h2>}
         {props.subtitle && <h3>{props.subtitle}</h3>}
       </Column>
-      <Row gridColumn={2} pb={4}>
+
+      <Row gridColumn={2} pb={4} className={styles.scroll}>
         <Column className={styles.grid}>
           <Column className={styles.grid}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (
-                  <li key={node.id}>
+                  <li key={node.id} className={styles.listItem}>
                     <ProjectPreviewArt {...node} />
                   </li>
                 ))}
@@ -56,6 +55,7 @@ function ProjectPreviewGridArt(props) {
           </Column>
         </Column>
       </Row>
+
       <Row display="contents">
         <Row gridColumn={1}>
           <h4>Represented by:</h4>{" "}
@@ -70,7 +70,6 @@ function ProjectPreviewGridArt(props) {
 
 ProjectPreviewGridArt.defaultProps = {
   title: "",
-  subtitle: "",
   nodes: [],
   browseMoreHref: ""
 };

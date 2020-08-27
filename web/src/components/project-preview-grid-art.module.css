@@ -21,90 +21,43 @@
   }
 }
 
-.listItem {
-  padding-top: 5px;
-}
-
-.scroll {
-  @media (min-width: 450px) {
-    overflow: scroll;
-  }
-}
-
-.scroll::-webkit-scrollbar {
-  display: none;
-}
-
 .landscape {
   @media (min-width: 450px) {
     column-span: all;
   }
 }
 
-.img {
-  width: 100%;
+.landscape:hover {
   height: auto;
-}
-
-.overlay {
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
-}
-
-.landscape:hover .overlay {
   opacity: 1;
+  transition: 0.1s ease;
+  background-color: yellow;
+  color: blue;
 }
 
-.portrait:hover .overlay {
-  opacity: 1;
+.listItem {
+  @media (min-width: 450px) {
+    padding-top: 5px;
+  }
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+.scroll {
+  overflow: scroll;
 }
 
-/* .landscape {
-  column-span: all;
-} */
-
-/* .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
+.scroll::-webkit-scrollbar {
+  display: none;
 }
-
-.node :hover .overlay {
-  background-color: #008cba;
-  opacity: 1;
-} */
 
 /* .browseMoreNav {
   composes: small from "./typography.module.css";
   margin-top: 1rem;
   text-align: right;
-
   @nest & a {
     display: inline-block;
     padding: 0.5rem 0;
     color: inherit;
     text-decoration: none;
-
     @media (hover: hover) {
       @nest &:hover {
         color: var(--color-accent);
