@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./project-preview-grid-design.module.css";
+import styles from "./project-preview-grid-art.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 import ProjectPreviewArt from "./project-preview-art";
