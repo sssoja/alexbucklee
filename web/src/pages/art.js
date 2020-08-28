@@ -13,7 +13,7 @@ import Layout from "../containers/layout";
 export const query = graphql`
   query ArtPageQuery {
     projects: allSanityArt(
-      limit: 12
+      limit: 20
       sort: { fields: [publishedAt], order: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
