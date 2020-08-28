@@ -1,18 +1,11 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 
-/* .root {
-  margin: 2em 0 4em;
-} */
-
-/* .headline {
-  font-size: var(--font-micro-size);
-  line-height: var(--font-micro-line-height);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 2rem 0;
-} */
+.grid {
+  @media (max-width: 450px) {
+    padding: 20px;
+  }
+}
 
 .grid {
   @media (min-width: 450px) {
@@ -55,40 +48,15 @@
   }
 }
 
-/* .h1 {
-  display: block;
-  width: 100%;
-}
-
-.gifWrapper {
-  position: absolute;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gifWrapper:hover {
-  opacity: 1;
-}
-
-.gif {
-  @media (min-width: 450px) {
-    max-width: 150%;
-  }
-} */
-
-/* .landscape:hover {
-  height: auto;
-  opacity: 1;
-  transition: 0.1s ease;
-  background-color: yellow;
-  color: blue;
-} */
-
 .listItem {
   @media (min-width: 450px) {
     padding-top: 5px;
+  }
+}
+
+.listItem {
+  @media (max-width: 450px) {
+    padding-top: 20px;
   }
 }
 
@@ -99,19 +67,3 @@
 .scroll::-webkit-scrollbar {
   display: none;
 }
-/* .browseMoreNav {
-  composes: small from "./typography.module.css";
-  margin-top: 1rem;
-  text-align: right;
-  @nest & a {
-    display: inline-block;
-    padding: 0.5rem 0;
-    color: inherit;
-    text-decoration: none;
-    @media (hover: hover) {
-      @nest &:hover {
-        color: var(--color-accent);
-      }
-    }
-  }
-} */
