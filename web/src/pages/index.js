@@ -67,10 +67,18 @@ const IndexPage = props => {
           alignItems="center"
           textAlign="center"
         >
-          <h1 className={styles.h1}>WINDOW OF OPPORTUNITY</h1>
-          <Gif className={styles.gif}>
-            <img src={gif} />
-          </Gif>
+          <Wrapper
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            textAlign="center"
+            position="relative"
+          >
+            <h1 className={styles.h1}>WINDOW OF OPPORTUNITY</h1>
+            <Gif className={styles.gifWrapper}>
+              <img className={styles.gif} src={gif} />
+            </Gif>
+          </Wrapper>
         </Wrapper>
       </Container>
     </Layout>
