@@ -8,7 +8,7 @@ ${reset}
     font-family: "Helvetica Neue";
     text-decoration: none;
     color: ${theme.colors.athensGray};
-    background: ${theme.colors.black};
+    background: blue;
     padding: 32px;
     margin: 0px;
   }
