@@ -47,7 +47,7 @@ const AboutPage = props => {
   }
 
   const experience = (data || {}).experience;
-  const clients = data.experience.clients;
+  // const clients = data.experience.clients;
 
   return (
     <Layout>
@@ -75,18 +75,18 @@ const AboutPage = props => {
           </Paragraph>
           <h1>Experience</h1>
           <Column flexDirection="column">
-            <Paragraph>{experience.company}</Paragraph>
-            <Paragraph>{experience.role}</Paragraph>
-            <Paragraph> {experience.date}</Paragraph>
+            {/* <Paragraph>{experience.company}</Paragraph> */}
+            {/* <Paragraph>{experience.role}</Paragraph>
+            <Paragraph> {experience.date}</Paragraph> */}
             <p>Clients worked on include:</p>
-            <ul>
+            {/* <ul>
               {clients &&
                 clients.map(client => (
                   <li key={name}>
                     <li>{client}</li>
                   </li>
                 ))}
-            </ul>
+            </ul> */}
           </Column>
           <Column flexDirection="column">
             <Paragraph>WCRS</Paragraph>
