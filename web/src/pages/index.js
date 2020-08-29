@@ -5,7 +5,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 import styled from "styled-components";
-import { typography, flexbox, position, layout, space } from "styled-system";
+import { typography } from "styled-system";
 import styles from "../components/index.module.css";
 import gif from "../components/assets/works.gif";
 
@@ -20,19 +20,7 @@ export const query = graphql`
 `;
 
 const Wrapper = styled.div`
-  height: 80vh;
   ${typography};
-  ${flexbox};
-  ${position};
-  ${layout};
-  ${space};
-`;
-
-const Gif = styled.div`
-  ${flexbox};
-  ${position};
-  ${layout};
-  ${space};
 `;
 
 const IndexPage = props => {
@@ -59,25 +47,12 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <Wrapper
-          fontSize={fontSizes}
-          position="relative"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          textAlign="center"
-        >
-          <Wrapper
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            textAlign="center"
-            position="relative"
-          >
+        <Wrapper fontSize={fontSizes} className={styles.wrapper}>
+          <Wrapper className={styles.wrapper}>
             <h1 className={styles.h1}>WINDOW OF OPPORTUNITY</h1>
-            <Gif className={styles.gifWrapper}>
+            <div className={styles.gifWrapper}>
               <img className={styles.gif} src={gif} />
-            </Gif>
+            </div>
           </Wrapper>
         </Wrapper>
       </Container>
