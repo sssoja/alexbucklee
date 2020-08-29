@@ -1,9 +1,21 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import styled from "styled-components";
-import { space, typography, flexbox, layout, grid } from "styled-system";
+import { typography, flexbox, layout, grid } from "styled-system";
+
+export const query = graphql`
+  query AboutPageQuery {
+    experience: sanityExperience(_id: { regex: "/(drafts.|)experience/" }) {
+      company
+      role
+      date
+      clients
+    }
+  }
+`;
 
 const TextWrapper = styled.div`
   ${typography};
@@ -23,7 +35,9 @@ const Paragraph = styled.p`
 
 const AboutPage = props => {
   const fontSizes = [0, 1, 2, 3];
-  const { errors } = props;
+
+  const { data, errors } = props;
+
   if (errors) {
     return (
       <Layout>
@@ -31,6 +45,9 @@ const AboutPage = props => {
       </Layout>
     );
   }
+
+  const experience = (data || {}).experience;
+  const clients = data.experience.clients;
 
   return (
     <Layout>
@@ -58,17 +75,17 @@ const AboutPage = props => {
           </Paragraph>
           <h1>Experience</h1>
           <Column flexDirection="column">
-            <Paragraph>Fearlessly Frank</Paragraph>
-            <Paragraph>Art Director &amp; Designer</Paragraph>
-            <Paragraph>2016 - current</Paragraph>
+            <Paragraph>{experience.company}</Paragraph>
+            <Paragraph>{experience.role}</Paragraph>
+            <Paragraph> {experience.date}</Paragraph>
+            <p>Clients worked on include:</p>
             <ul>
-              <li>
-                Clients worked on include:
-                <li>- Lorem Ipsum</li>
-                <li>- Lorem Ipsum</li>
-                <li>- Lorem Ipsum</li>
-                <li>- Lorem Ipsum</li>
-              </li>
+              {clients &&
+                clients.map(client => (
+                  <li key={name}>
+                    <li>{client}</li>
+                  </li>
+                ))}
             </ul>
           </Column>
           <Column flexDirection="column">
@@ -87,6 +104,10 @@ const AboutPage = props => {
       </Container>
     </Layout>
   );
+};
+
+AboutPage.defaultProps = {
+  clients: []
 };
 
 export default AboutPage;

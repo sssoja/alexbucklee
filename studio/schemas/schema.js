@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // Document types
 import category from "./documents/category";
+import experience from "./documents/experience";
 import person from "./documents/person";
 import art from "./documents/art";
 import design from "./documents/design";
@@ -38,6 +39,7 @@ export default createSchema({
     art,
     category,
     design,
+    experience,
     person,
     sampleProject,
     siteSettings
