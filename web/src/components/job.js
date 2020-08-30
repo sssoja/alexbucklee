@@ -10,13 +10,14 @@ function Job(props) {
   return (
     <Fragment>
       <div>
-        <Div mb={2}>
+        <Div mb={[3, 4]}>
           {props.company && <p>{props.company}</p>}
           {props.role && <p>{props.role}</p>}
           {props.date && <p>{props.date}</p>}
-
-          <p>Clients worked on include:</p>
         </Div>
+
+        <p>Clients worked on include:</p>
+
         <ul>
           {props.clients &&
             props.clients.map(client => (
