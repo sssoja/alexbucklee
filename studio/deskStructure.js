@@ -2,7 +2,7 @@ import S from "@sanity/desk-tool/structure-builder";
 import MdSettings from "react-icons/lib/md/settings";
 
 const hiddenDocTypes = listItem =>
-  !["art", "design", "category", "experience", "person", "sampleProject", "siteSettings"].includes(
+  !["art", "design", "experience", "category", "person", "sampleProject", "siteSettings"].includes(
     listItem.getId()
   );
 
@@ -43,6 +43,7 @@ export default () =>
         .title("Experience")
         .schemaType("experience")
         .child(S.documentTypeList("experience").title("Experience")),
+
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above

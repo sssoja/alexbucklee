@@ -7,8 +7,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // Document types
 import category from "./documents/category";
 import art from "./documents/art";
-import design from "./documents/design";
 import experience from "./documents/experience";
+import design from "./documents/design";
 import person from "./documents/person";
 import sampleProject from "./documents/sampleProject";
 import siteSettings from "./documents/siteSettings";

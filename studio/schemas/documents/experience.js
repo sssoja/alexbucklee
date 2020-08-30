@@ -2,6 +2,7 @@ export default {
   name: "experience",
   type: "document",
   title: "Experience",
+
   fields: [
     {
       name: "company",
@@ -19,8 +20,8 @@ export default {
       title: "Date"
     },
     {
-      name: "clients",
       title: "Clients",
+      name: "clients",
       type: "array",
       of: [{ type: "string" }]
     }
