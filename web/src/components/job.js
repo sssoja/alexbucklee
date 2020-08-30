@@ -12,7 +12,7 @@ function Job(props) {
         <ul>
           {props.clients &&
             props.clients.map(client => (
-              <li key={name}>
+              <li key={props.id}>
                 <li>{client}</li>
               </li>
             ))}
