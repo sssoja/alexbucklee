@@ -6,17 +6,6 @@ import Layout from "../containers/layout";
 import styled from "styled-components";
 import { typography, flexbox, layout, grid } from "styled-system";
 
-export const query = graphql`
-  query AboutPageQuery {
-    experience: sanityExperience(_id: { regex: "/(drafts.|)experience/" }) {
-      company
-      role
-      date
-      clients
-    }
-  }
-`;
-
 const TextWrapper = styled.div`
   ${typography};
   ${flexbox};
@@ -34,8 +23,6 @@ const Paragraph = styled.p`
 `;
 
 const AboutPage = props => {
-  const fontSizes = [0, 1, 2, 3];
-
   const { data, errors } = props;
 
   if (errors) {
@@ -46,8 +33,7 @@ const AboutPage = props => {
     );
   }
 
-  const experience = (data || {}).experience;
-  // const clients = data.experience.clients;
+  const fontSizes = [0, 1, 2, 3];
 
   return (
     <Layout>
@@ -75,18 +61,16 @@ const AboutPage = props => {
           </Paragraph>
           <h1>Experience</h1>
           <Column flexDirection="column">
-            {/* <Paragraph>{experience.company}</Paragraph> */}
-            {/* <Paragraph>{experience.role}</Paragraph>
-            <Paragraph> {experience.date}</Paragraph> */}
+            <Paragraph>Fearlessly Frank</Paragraph>
+            <Paragraph>Art Director &amp; Designer</Paragraph>
+            <Paragraph>2016 - current</Paragraph>
             <p>Clients worked on include:</p>
-            {/* <ul>
-              {clients &&
-                clients.map(client => (
-                  <li key={name}>
-                    <li>{client}</li>
-                  </li>
-                ))}
-            </ul> */}
+            <ul>
+              <li>- Lorem Ipsum</li>
+              <li>- Lorem Ipsum</li>
+              <li>- Lorem Ipsum</li>
+              <li>- Lorem Ipsum</li>
+            </ul>
           </Column>
           <Column flexDirection="column">
             <Paragraph>WCRS</Paragraph>
@@ -104,10 +88,6 @@ const AboutPage = props => {
       </Container>
     </Layout>
   );
-};
-
-AboutPage.defaultProps = {
-  clients: []
 };
 
 export default AboutPage;
