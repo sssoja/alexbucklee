@@ -4,7 +4,7 @@ import MdSettings from "react-icons/lib/md/settings";
 const hiddenDocTypes = listItem =>
   ![
     "art",
-    "aboutMe",
+    "bio",
     "design",
     "experience",
     "category",
@@ -52,8 +52,8 @@ export default () =>
         .child(S.documentTypeList("experience").title("Experience")),
       S.listItem()
         .title("Bio")
-        .schemaType("aboutMe")
-        .child(S.documentTypeList("aboutMe").title("Bio")),
+        .schemaType("bio")
+        .child(S.documentTypeList("bio").title("Bio")),
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

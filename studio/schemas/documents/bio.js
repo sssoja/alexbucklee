@@ -1,5 +1,5 @@
 export default {
-  name: "aboutMe",
+  name: "Bio",
   type: "document",
   title: "Bio",
 
@@ -10,7 +10,7 @@ export default {
       title: "Title"
     },
     {
-      name: "bioText",
+      name: "bio",
       type: "text",
       title: "Bio"
     }

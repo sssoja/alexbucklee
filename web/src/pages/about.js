@@ -35,8 +35,6 @@ const AboutPage = props => {
 
   const experiences = (data || {}).experience ? mapEdgesToNodes(data.experience) : [];
 
-  const bio = (data || {}).bio;
-
   return (
     <Layout>
       <Container>{experiences && <Experience nodes={experiences} />}</Container>
