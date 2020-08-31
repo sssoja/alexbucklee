@@ -4,7 +4,7 @@ import MdSettings from "react-icons/lib/md/settings";
 const hiddenDocTypes = listItem =>
   ![
     "art",
-    "bio",
+    "aboutMe",
     "design",
     "experience",
     "category",
