@@ -7,7 +7,7 @@ import Layout from "../containers/layout";
 import styled from "styled-components";
 import { typography } from "styled-system";
 import styles from "../components/index.module.css";
-import gif from "../components/assets/works.gif";
+import gif from "../components/assets/works1.gif";
 
 export const query = graphql`
   query IndexPageQuery {
