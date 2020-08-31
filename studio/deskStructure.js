@@ -52,8 +52,8 @@ export default () =>
         .child(S.documentTypeList("experience").title("Experience")),
       S.listItem()
         .title("Bio")
-        .schemaType("bio")
-        .child(S.documentTypeList("bio").title("Bio")),
+        .schemaType("aboutMe")
+        .child(S.documentTypeList("aboutMe").title("Bio")),
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

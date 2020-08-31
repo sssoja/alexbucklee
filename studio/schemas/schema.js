@@ -7,7 +7,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // Document types
 import category from "./documents/category";
 import art from "./documents/art";
-import bio from "./documents/bio";
+import aboutMe from "./documents/aboutMe";
 import experience from "./documents/experience";
 import design from "./documents/design";
 import person from "./documents/person";
@@ -38,7 +38,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     art,
-    bio,
+    aboutMe,
     category,
     design,
     experience,
