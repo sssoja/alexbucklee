@@ -19,6 +19,9 @@ export const query = graphql`
         }
       }
     }
+    bio: sanityBio {
+      bio
+    }
   }
 `;
 
@@ -34,6 +37,8 @@ const AboutPage = props => {
   }
 
   const experiences = (data || {}).experience ? mapEdgesToNodes(data.experience) : [];
+
+  const bio = (data || {}).bio;
 
   return (
     <Layout>
