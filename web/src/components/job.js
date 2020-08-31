@@ -1,12 +1,21 @@
 import React, { Fragment } from "react";
+import styled from "styled-components";
+import { space } from "styled-system";
+
+const Div = styled.div`
+  ${space};
+`;
 
 function Job(props) {
   return (
     <Fragment>
       <div>
-        {props.company && <p>{props.company}</p>}
-        {props.role && <p>{props.role}</p>}
-        {props.date && <p>{props.date}</p>}
+        <Div mb={[3, 4]}>
+          {props.company && <p>{props.company}</p>}
+          {props.role && <p>{props.role}</p>}
+          {props.date && <p>{props.date}</p>}
+        </Div>
+
         <p>Clients worked on include:</p>
 
         <ul>
