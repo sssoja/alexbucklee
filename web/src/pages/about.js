@@ -5,9 +5,14 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Experience from "../components/experience";
 import Layout from "../containers/layout";
+import { space, typography, flexbox, layout, grid } from "styled-system";
+import styled from "styled-components";
 
 export const query = graphql`
   query AboutPageQuery {
+    bio: sanityBio {
+      bio
+    }
     experience: allSanityExperience {
       edges {
         node {
@@ -22,8 +27,21 @@ export const query = graphql`
   }
 `;
 
+const Grid = styled.div`
+  height: 80vh;
+  ${typography};
+  ${flexbox};
+  ${layout};
+  ${grid};
+`;
+
+const Paragraph = styled.p`
+  ${grid};
+`;
+
 const AboutPage = props => {
   const { data, errors } = props;
+  const fontSizes = [0, 1, 2, 3];
 
   if (errors) {
     return (
@@ -34,12 +52,15 @@ const AboutPage = props => {
   }
 
   const experiences = (data || {}).experience ? mapEdgesToNodes(data.experience) : [];
+  const bio = (data || {}).bio;
 
   return (
     <Layout>
-      <Container>{experiences && <Experience nodes={experiences} />}</Container>
+      <Container>{experiences && <Experience bio={bio.bio} nodes={experiences} />}</Container>
     </Layout>
   );
 };
 
 export default AboutPage;
+
+// {props.bio && <p>{props.bio}</p>}
