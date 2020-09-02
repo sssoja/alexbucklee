@@ -4,7 +4,7 @@ import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 
 const Grid = styled.div`
-  overflow: scroll;
+  overflow: hidden;
   ${typography};
   ${flexbox};
   ${layout};
@@ -47,7 +47,7 @@ function Experience(props) {
           <Column pb={2} mr={4}>
             <h1>Bio</h1>
           </Column>
-          <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
+          <Row> {props.bio && <p>{props.bio}</p>}</Row>
         </Row>
         <Row flexDirection={["column", "row"]} pt={4}>
           <Column pb={2} mr={4}>
