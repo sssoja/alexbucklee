@@ -55,7 +55,11 @@ const ContactPage = props => {
           <ContactInfo gridRow={3}>Mobile</ContactInfo>
           <ContactInfo gridRow={3}>+44 7768 619 885</ContactInfo>
           <ContactInfo gridRow={4}>Instagram</ContactInfo>
-          <ContactInfo gridRow={4}>@alexbucklee</ContactInfo>
+          <ContactInfo gridRow={4}>
+            <a href="https://www.instagram.com/alexbucklee/" target="_blank">
+              @alexbucklee
+            </a>
+          </ContactInfo>
         </ListWrapper>
       </Container>
     </Layout>
