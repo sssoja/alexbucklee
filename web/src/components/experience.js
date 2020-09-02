@@ -41,7 +41,7 @@ const ListItem = styled.li`
 
 function Experience(props) {
   return (
-    <Grid fontSize={3} lineHeight={1.5} textAlign="justify" display="flex">
+    <Grid fontSize={[2, 3]} lineHeight={1.5} textAlign="justify" display="flex">
       <Column flexDirection="column">
         <Row flexDirection={["column", "row"]} pb={[2, 4]}>
           <Column pb={2} mr={4}>

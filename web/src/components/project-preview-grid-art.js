@@ -33,7 +33,7 @@ function ProjectPreviewGridArt(props) {
       gridTemplateRows="90%"
       display={["flex", "grid"]}
       flexDirection="column"
-      fontSize={3}
+      fontSize={[2, 3]}
     >
       <Column gridColumn={1} display="flex" flexDirection="column" mr={4} mb={4}>
         {props.title && <h2>{props.title}</h2>}

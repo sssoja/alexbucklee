@@ -26,7 +26,7 @@ const StyledLink = styled(Link)`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={3} pb={4}>
+    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={[2, 3]} pb={4}>
       <Container width={["4em", "8em", "7em", "8em"]} display="block">
         <a to="/">{siteTitle}</a>
       </Container>
