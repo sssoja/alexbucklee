@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .gifWrapper:hover {
@@ -27,7 +28,4 @@
 
 .gif {
   max-width: 160%;
-  @media (max-width: 450px) {
-    max-width: 130%;
-  }
 }
