@@ -16,7 +16,7 @@ function Job(props) {
           {props.date && <p>{props.date}</p>}
         </Div>
 
-        <p>Clients worked on include:</p>
+        <p>Clients include:</p>
 
         <ul>
           {props.clients &&

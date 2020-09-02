@@ -4,7 +4,7 @@ import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 
 const Grid = styled.div`
-  height: 80vh;
+  height: 100vh;
   ${typography};
   ${flexbox};
   ${layout};
@@ -14,12 +14,15 @@ const Grid = styled.div`
 const Column = styled.div`
   display: flex;
   ${flexbox};
+  ${layout};
+  ${space};
 `;
 
 const Row = styled.div`
   display: flex;
   ${flexbox};
   ${grid};
+  ${space};
 `;
 
 const List = styled.ul`
@@ -36,40 +39,33 @@ const ListItem = styled.li`
   ${flexbox};
 `;
 
-const Paragraph = styled.p`
-  ${grid};
-`;
-
 function Experience(props) {
   const fontSizes = [0, 1, 2, 3];
   return (
-    <Grid
-      fontSize={fontSizes}
-      lineHeight={1.5}
-      textAlign="justify"
-      gridTemplateColumns="20% 1fr, 1fr "
-      gridTemplateRows="repeat(2, 1fr)"
-      gridColumnGap={[4, null, null, 6]}
-      gridRowGap={4}
-      display={["flex", "grid"]}
-      flexDirection="column"
-    >
-      <h1>Bio</h1>
-      <Row flexDirection="row" gridColumn="2/4">
-        {" "}
-        {props.bio && <p>{props.bio}</p>}
-      </Row>
-      <h1>Experience</h1>
-      <Row flexDirection="row" gridColumn="2/4">
-        <List flexDirection={["column", "row"]} textAlign="left">
-          {props.nodes &&
-            props.nodes.map(node => (
-              <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
-                <Job {...node} />
-              </ListItem>
-            ))}
-        </List>
-      </Row>
+    <Grid fontSize={fontSizes} lineHeight={1.5} textAlign="justify" display="flex">
+      <Column flexDirection="column">
+        <Row flexDirection={["column", "row"]} pb={[2, 4]}>
+          <Column pb={2} mr={4}>
+            <h1>Bio</h1>
+          </Column>
+          <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
+        </Row>
+        <Row flexDirection={["column", "row"]} pt={4}>
+          <Column pb={2} mr={4}>
+            <h1>Experience</h1>
+          </Column>
+          <Row>
+            <List flexDirection={["column", "row"]} textAlign="left" flexFlow="wrap">
+              {props.nodes &&
+                props.nodes.map(node => (
+                  <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
+                    <Job {...node} />
+                  </ListItem>
+                ))}
+            </List>
+          </Row>
+        </Row>
+      </Column>
     </Grid>
   );
 }

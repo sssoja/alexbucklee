@@ -5,8 +5,6 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Experience from "../components/experience";
 import Layout from "../containers/layout";
-import { space, typography, flexbox, layout, grid } from "styled-system";
-import styled from "styled-components";
 
 export const query = graphql`
   query AboutPageQuery {
@@ -25,18 +23,6 @@ export const query = graphql`
       }
     }
   }
-`;
-
-const Grid = styled.div`
-  height: 80vh;
-  ${typography};
-  ${flexbox};
-  ${layout};
-  ${grid};
-`;
-
-const Paragraph = styled.p`
-  ${grid};
 `;
 
 const AboutPage = props => {
@@ -62,5 +48,3 @@ const AboutPage = props => {
 };
 
 export default AboutPage;
-
-// {props.bio && <p>{props.bio}</p>}
