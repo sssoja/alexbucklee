@@ -79,14 +79,7 @@ const ArtworkPage = props => {
   return (
     <Layout>
       <Container>
-        {projectNodes && (
-          <ProjectPreviewGridArt
-            title="Art works"
-            subtitle="(some of which can be purchased here)"
-            nodes={projectNodes}
-            browseMoreHref="/archive/"
-          />
-        )}
+        {projectNodes && <ProjectPreviewGridArt title="Art works" nodes={projectNodes} />}
       </Container>
     </Layout>
   );

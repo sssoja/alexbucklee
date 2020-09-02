@@ -58,10 +58,16 @@ function ProjectPreviewGridArt(props) {
 
       <Row display="contents">
         <Row gridColumn={1}>
-          <h4>Represented by:</h4>{" "}
-        </Row>
-        <Row gridColumn={2}>
-          <h4>Atom Gallery, The Art Hound Gallery, Subversion Gallery</h4>{" "}
+          <h4>
+            Purchase{" "}
+            <a
+              href="https://fiftypoundland.bigcartel.com/products"
+              target="_blank"
+              style={{ textDecoration: "underline" }}
+            >
+              here
+            </a>
+          </h4>{" "}
         </Row>
       </Row>
     </GridWrapper>
