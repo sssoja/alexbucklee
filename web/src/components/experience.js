@@ -5,6 +5,7 @@ import Job from "./job";
 
 const Grid = styled.div`
   height: 100vh;
+  overflow: scroll;
   ${typography};
   ${flexbox};
   ${layout};
