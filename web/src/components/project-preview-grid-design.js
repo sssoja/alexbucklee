@@ -27,7 +27,7 @@ const Row = styled.div`
 `;
 
 function ProjectPreviewGridDesign(props) {
-  const fontSizes = [0, 1, 2, 3];
+  const fontSizes = [2, 2, 2, 3];
   return (
     <GridWrapper
       gridTemplateColumns="20%"
@@ -54,15 +54,6 @@ function ProjectPreviewGridDesign(props) {
             </ul>
           </Column>
         </Column>
-      </Row>
-
-      <Row display="contents">
-        <Row gridColumn={1}>
-          <h4>Employer:</h4>{" "}
-        </Row>
-        <Row gridColumn={2}>
-          <h4>Freelance, Fearlessly Frank</h4>{" "}
-        </Row>
       </Row>
     </GridWrapper>
   );

@@ -27,7 +27,7 @@ const Row = styled.div`
 `;
 
 function ProjectPreviewGridArt(props) {
-  const fontSizes = [0, 1, 2, 3];
+  const fontSizes = [2, 2, 2, 3];
   return (
     <GridWrapper
       gridTemplateColumns="20%"
