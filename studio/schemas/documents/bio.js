@@ -4,11 +4,11 @@ export default {
   title: "Bio",
 
   fields: [
-    {
-      name: "title",
-      type: "string",
-      title: "Title"
-    },
+    // {
+    //   name: "title",
+    //   type: "string",
+    //   title: "Title"
+    // },
     {
       name: "bio",
       type: "text",
