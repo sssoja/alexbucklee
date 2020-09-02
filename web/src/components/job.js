@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 
-const Div = styled.div`
+const Row = styled.div`
   ${space};
 `;
 
@@ -10,11 +10,11 @@ function Job(props) {
   return (
     <Fragment>
       <div>
-        <Div mb={[3, 4]}>
+        <Row mb={[3, 4]}>
           {props.company && <p>{props.company}</p>}
           {props.role && <p>{props.role}</p>}
           {props.date && <p>{props.date}</p>}
-        </Div>
+        </Row>
 
         <p>Clients include:</p>
 

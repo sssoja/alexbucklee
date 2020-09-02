@@ -27,7 +27,6 @@ export const query = graphql`
 
 const AboutPage = props => {
   const { data, errors } = props;
-  const fontSizes = [0, 1, 2, 3];
 
   if (errors) {
     return (

@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
   ${grid};
 `;
 
-const fontSizes = [0, 1, 2, 3];
+const fontSizes = [2, 2, 2, 3];
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>

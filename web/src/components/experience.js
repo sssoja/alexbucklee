@@ -40,7 +40,7 @@ const ListItem = styled.li`
 `;
 
 function Experience(props) {
-  const fontSizes = [0, 1, 2, 3];
+  const fontSizes = [2, 2, 2, 3];
   return (
     <Grid fontSize={fontSizes} lineHeight={1.5} textAlign="justify" display="flex">
       <Column flexDirection="column">
