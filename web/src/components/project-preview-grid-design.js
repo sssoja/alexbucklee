@@ -36,9 +36,8 @@ function ProjectPreviewGridDesign(props) {
       flexDirection="column"
       fontSize={fontSizes}
     >
-      <Column gridColumn={1} display="flex" flexDirection="column" mr={4}>
+      <Column gridColumn={1} display="flex" flexDirection="column" mr={4} mb={4}>
         {props.title && <h2>{props.title}</h2>}
-        {props.subtitle && <h3>{props.subtitle}</h3>}
       </Column>
 
       <Row gridColumn={2} pb={4} className={styles.scroll}>
@@ -61,8 +60,7 @@ function ProjectPreviewGridDesign(props) {
 
 ProjectPreviewGridDesign.defaultProps = {
   title: "",
-  nodes: [],
-  browseMoreHref: ""
+  nodes: []
 };
 
 export default ProjectPreviewGridDesign;
