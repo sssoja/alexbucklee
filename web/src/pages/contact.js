@@ -21,7 +21,6 @@ const ContactInfo = styled.p`
 `;
 
 const ContactPage = props => {
-  const fontSizes = [2, 2, 2, 3];
   const { errors } = props;
   if (errors) {
     return (
@@ -40,7 +39,7 @@ const ContactPage = props => {
           gridRowGap={1}
           gridColumnGap={4}
           maxWidth="55%"
-          fontSize={fontSizes}
+          fontSize={3}
         >
           <H1 gridColumn="1/3" mt={4} mb={3}>
             Let's chat...

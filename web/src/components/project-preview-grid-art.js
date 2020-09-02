@@ -27,14 +27,13 @@ const Row = styled.div`
 `;
 
 function ProjectPreviewGridArt(props) {
-  const fontSizes = [2, 2, 2, 3];
   return (
     <GridWrapper
       gridTemplateColumns="20%"
       gridTemplateRows="90%"
       display={["flex", "grid"]}
       flexDirection="column"
-      fontSize={fontSizes}
+      fontSize={3}
     >
       <Column gridColumn={1} display="flex" flexDirection="column" mr={4} mb={4}>
         {props.title && <h2>{props.title}</h2>}
@@ -42,7 +41,7 @@ function ProjectPreviewGridArt(props) {
 
       <Row gridColumn={2} pb={4} className={styles.scroll}>
         <Column className={styles.grid}>
-          <Column className={styles.grid}>
+          <Column className={styles.grid} fontSize={5}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (
