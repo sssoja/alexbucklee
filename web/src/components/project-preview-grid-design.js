@@ -36,7 +36,7 @@ function ProjectPreviewGridDesign(props) {
       fontSize={[2, 3]}
     >
       <Column gridColumn={1} display="flex" flexDirection="column" mt={4} mr={4}>
-        {props.title && <h2>{props.title}</h2>}
+        <Row>{props.title && <h2>{props.title}</h2>}</Row>
       </Column>
 
       <Row gridColumn={2} className={styles.scroll} mt={[2, 4]}>
