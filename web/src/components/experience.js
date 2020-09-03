@@ -9,6 +9,7 @@ const Grid = styled.div`
   ${layout};
   ${grid};
   ${space};
+  height: 80vh;
 `;
 
 const Column = styled.div`
