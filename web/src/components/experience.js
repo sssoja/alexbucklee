@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 
-const Wrapper = styled.div`
+const Grid = styled.div`
   ${typography};
   ${flexbox};
   ${layout};
   ${grid};
+  ${space};
 `;
 
 const Column = styled.div`
@@ -15,6 +16,7 @@ const Column = styled.div`
   ${flexbox};
   ${layout};
   ${space};
+  ${grid};
 `;
 
 const Row = styled.div`
@@ -40,37 +42,39 @@ const ListItem = styled.li`
 
 function Experience(props) {
   return (
-    <Wrapper
+    <Grid
       fontSize={[2, 3]}
       lineHeight={1.5}
       textAlign="justify"
-      display="flex"
+      gridTemplateColumns="5% 80% "
+      gridTemplateRows="repeat(2, 1fr)"
+      gridColumnGap={[4, null, null, 6]}
+      gridRowGap={4}
+      display={["flex", "grid"]}
       flexDirection="column"
-      justifyContent="center"
-      alignitems="center"
+      mt={4}
     >
-      <Row flexDirection={["column", "row"]} mt={4} mb={[2, 4]} mr={[0, 4]}>
-        <Column width={600} mr={4} mb={2}>
-          <h1>Bio</h1>
-        </Column>
+      <h1>Bio</h1>
+
+      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
+        {" "}
         {props.bio && <p>{props.bio}</p>}
       </Row>
-      <Row flexDirection={["column", "row"]} pt={4} mr={[0, 7]}>
-        <Column width={150} mr={4} mb={2}>
-          <h1>Experience</h1>
-        </Column>
-        <Row>
-          <List flexDirection={["column", "row"]} textAlign="left">
-            {props.nodes &&
-              props.nodes.map(node => (
-                <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
-                  <Job {...node} />
-                </ListItem>
-              ))}
-          </List>
-        </Row>
+
+      <h1>Experience</h1>
+
+      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
+        <List flexDirection={["column", "row"]} textAlign="left">
+          {" "}
+          {props.nodes &&
+            props.nodes.map(node => (
+              <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
+                <Job {...node} />
+              </ListItem>
+            ))}
+        </List>
       </Row>
-    </Wrapper>
+    </Grid>
   );
 }
 
