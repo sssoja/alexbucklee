@@ -53,17 +53,16 @@ function Experience(props) {
       gridRowGap={4}
       display={["flex", "grid"]}
       flexDirection="column"
-      mt={4}
     >
-      <h1>Bio</h1>
-
-      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
+      {" "}
+      <Column mt={4}>
+        <h1>Bio</h1>
+      </Column>
+      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]} mt={4}>
         {" "}
         {props.bio && <p>{props.bio}</p>}
       </Row>
-
       <h1>Experience</h1>
-
       <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
         <List flexDirection={["column", "row"]} textAlign="left">
           {" "}
