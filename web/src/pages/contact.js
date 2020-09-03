@@ -48,7 +48,7 @@ const ContactPage = props => {
           <ContactInfo gridRow={2}>Email </ContactInfo>
           <ContactInfo gridRow={2}>
             <a href="mailto:alexbucklee@gmail.com" target="_blank">
-              alexbucklee@gmail.com
+              abuckleeuk@gmail.com
             </a>
           </ContactInfo>
           <ContactInfo gridRow={3}>Mobile</ContactInfo>
