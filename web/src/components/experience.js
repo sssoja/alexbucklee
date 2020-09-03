@@ -48,7 +48,7 @@ function Experience(props) {
       fontSize={[2, 3]}
       lineHeight={1.5}
       textAlign="justify"
-      gridTemplateColumns="10% 80% "
+      gridTemplateColumns="5% 85% "
       gridTemplateRows="repeat(2, 1fr)"
       gridColumnGap={[4, null, null, 6]}
       gridRowGap={4}
@@ -59,14 +59,14 @@ function Experience(props) {
       <Column mt={4}>
         <h1>Bio</h1>
       </Column>
-      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]} mt={4}>
+      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]} mt={4} ml={[0, 6, null, 4]}>
         {" "}
         {props.bio && <p>{props.bio}</p>}
       </Row>
       <Column mr={4}>
         <h1>Experience</h1>
       </Column>
-      <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
+      <Row flexDirection="row" gridColumn="2/3" ml={[0, 6, null, 4]}>
         <List flexDirection={["column", "row"]} textAlign="left">
           {" "}
           {props.nodes &&
