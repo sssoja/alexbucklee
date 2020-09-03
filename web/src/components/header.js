@@ -12,7 +12,7 @@ const NavMenu = styled.ul`
   ${typography};
 `;
 
-const Container = styled(Link)`
+const Container = styled.div`
   ${layout};
   ${flexbox};
   ${grid};
