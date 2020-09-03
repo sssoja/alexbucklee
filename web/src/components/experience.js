@@ -49,7 +49,7 @@ function Experience(props) {
       justifyContent="center"
       alignitems="center"
     >
-      <Row flexDirection={["column", "row"]} pb={[2, 4]} mr={[0, 4]}>
+      <Row flexDirection={["column", "row"]} mt={4} mb={[2, 4]} mr={[0, 4]}>
         <Column width={600} mr={4} mb={2}>
           <h1>Bio</h1>
         </Column>

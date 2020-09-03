@@ -16,9 +16,8 @@ function Job(props) {
           {props.date && <p>{props.date}</p>}
         </Row>
 
-        {!props.clients && <p></p>}
-
         <ul>
+          <p>Clients include:</p>
           {props.clients &&
             props.clients.map(client => (
               <li key={props.id}>

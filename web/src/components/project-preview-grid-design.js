@@ -35,11 +35,11 @@ function ProjectPreviewGridDesign(props) {
       flexDirection="column"
       fontSize={[2, 3]}
     >
-      <Column gridColumn={1} display="flex" flexDirection="column" mr={4} mb={4}>
+      <Column gridColumn={1} display="flex" flexDirection="column" mr={4} mb={4} mt={4}>
         {props.title && <h2>{props.title}</h2>}
       </Column>
 
-      <Row gridColumn={2} pb={4} className={styles.scroll}>
+      <Row gridColumn={2} pb={4} className={styles.scroll} mt={4}>
         <Column className={styles.grid}>
           <Column className={styles.grid} fontSize={5}>
             <ul>
