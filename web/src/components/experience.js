@@ -33,6 +33,7 @@ const List = styled.ul`
   ${layout};
   ${flexbox};
   ${grid};
+  ${space};
 `;
 
 const ListItem = styled.li`
@@ -47,7 +48,7 @@ function Experience(props) {
       fontSize={[2, 3]}
       lineHeight={1.5}
       textAlign="justify"
-      gridTemplateColumns="5% 80% "
+      gridTemplateColumns="10% 80% "
       gridTemplateRows="repeat(2, 1fr)"
       gridColumnGap={[4, null, null, 6]}
       gridRowGap={4}
@@ -62,7 +63,9 @@ function Experience(props) {
         {" "}
         {props.bio && <p>{props.bio}</p>}
       </Row>
-      <h1>Experience</h1>
+      <Column mr={4}>
+        <h1>Experience</h1>
+      </Column>
       <Row flexDirection="row" gridColumn="2/3" ml={[0, 4]}>
         <List flexDirection={["column", "row"]} textAlign="left">
           {" "}
