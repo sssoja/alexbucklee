@@ -3,13 +3,12 @@ import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 
-const Grid = styled.div`
+const Wrapper = styled.div`
   ${typography};
   ${flexbox};
   ${layout};
   ${grid};
   ${space};
-  height: 80vh;
 `;
 
 const Column = styled.div`
@@ -44,40 +43,31 @@ const ListItem = styled.li`
 
 function Experience(props) {
   return (
-    <Grid
-      fontSize={[2, 3]}
-      lineHeight={1.5}
-      textAlign="justify"
-      gridTemplateColumns="5% 85% "
-      gridTemplateRows="repeat(2, 1fr)"
-      gridColumnGap={[4, null, null, 6]}
-      gridRowGap={4}
-      display={["flex", "grid"]}
-      flexDirection="column"
-    >
+    <Wrapper fontSize={[2, 3]} lineHeight={1.5} textAlign="justify" flexDirection="column">
       {" "}
       <Column mt={4}>
-        <h1>Bio</h1>
+        <Column width="20%">
+          <h1>Bio</h1>
+        </Column>
+        <Row> {props.bio && <p>{props.bio}</p>}</Row>
       </Column>
-      <Row gridRow={1} flexDirection="row" gridColumn="2/3" ml={[0, 4]} mt={4} ml={[0, 6, null, 4]}>
-        {" "}
-        {props.bio && <p>{props.bio}</p>}
-      </Row>
-      <Column mr={4}>
-        <h1>Experience</h1>
+      <Column>
+        <Column width="20%">
+          <h1>Experience</h1>
+        </Column>
+        <Row>
+          <List textAlign="left">
+            {" "}
+            {props.nodes &&
+              props.nodes.map(node => (
+                <ListItem key={props.company} minWidth="fit-content" mr={6} mb={4}>
+                  <Job {...node} />
+                </ListItem>
+              ))}
+          </List>
+        </Row>
       </Column>
-      <Row gridRow={2} flexDirection="row" gridColumn="2/3" ml={[0, 6, null, 4]}>
-        <List flexDirection={["column", "row"]} textAlign="left">
-          {" "}
-          {props.nodes &&
-            props.nodes.map(node => (
-              <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
-                <Job {...node} />
-              </ListItem>
-            ))}
-        </List>
-      </Row>
-    </Grid>
+    </Wrapper>
   );
 }
 
