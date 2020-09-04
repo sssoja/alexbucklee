@@ -48,7 +48,7 @@ function Experience(props) {
           </Margin>
           <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
         </Row>
-        <Row flexDirection={["column", "row"]} mt={[6, 4]}>
+        <Row flexDirection={["column", "row"]} mt={[8, 4]}>
           <Margin mb={2} mr={4}>
             <h1>Experience</h1>
           </Margin>
