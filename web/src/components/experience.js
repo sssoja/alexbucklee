@@ -4,67 +4,63 @@ import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 
 const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
   ${typography};
-  ${flexbox};
   ${layout};
-  ${grid};
-  ${space};
 `;
 
 const Column = styled.div`
   display: flex;
-  ${flexbox};
-  ${layout};
-  ${space};
-  ${grid};
+  flex-direction: column;
 `;
 
 const Row = styled.div`
   display: flex;
   ${flexbox};
-  ${grid};
+  ${space};
+`;
+
+const Margin = styled.div`
   ${space};
 `;
 
 const List = styled.ul`
   display: flex;
   ${typography};
-  ${layout};
   ${flexbox};
-  ${grid};
-  ${space};
 `;
 
 const ListItem = styled.li`
   ${layout};
   ${space};
-  ${flexbox};
 `;
 
 function Experience(props) {
+  const fontSizes = [2, 3];
   return (
-    <Wrapper fontSize={[2, 3]} lineHeight={1.5} textAlign="justify" flexDirection="column">
-      {" "}
-      <Column mt={4}>
-        <Column width="20%">
-          <h1>Bio</h1>
-        </Column>
-        <Row> {props.bio && <p>{props.bio}</p>}</Row>
-      </Column>
+    <Wrapper fontSize={fontSizes} lineHeight={1.5} textAlign="justify">
       <Column>
-        <Column width="20%">
-          <h1>Experience</h1>
-        </Column>
-        <Row>
-          <List textAlign="left">
-            {" "}
-            {props.nodes &&
-              props.nodes.map(node => (
-                <ListItem key={props.company} minWidth="fit-content" mr={6} mb={4}>
-                  <Job {...node} />
-                </ListItem>
-              ))}
-          </List>
+        <Row flexDirection={["column", "row"]} mb={[2, 4]}>
+          <Margin mb={2} mr="5em">
+            <h1>Bio</h1>
+          </Margin>
+          <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
+        </Row>
+        <Row flexDirection={["column", "row"]} pt={4}>
+          <Margin mb={2} mr={4}>
+            <h1>Experience</h1>
+          </Margin>
+          <Row>
+            <List flexDirection={["column", "row"]} textAlign="left">
+              {props.nodes &&
+                props.nodes.map(node => (
+                  <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
+                    <Job {...node} />
+                  </ListItem>
+                ))}
+            </List>
+          </Row>
         </Row>
       </Column>
     </Wrapper>
