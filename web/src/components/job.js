@@ -1,22 +1,17 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
-import { space } from "styled-system";
-
-const Row = styled.div`
-  ${space};
-`;
+import { style } from "styled-system";
+import styles from "./about.module.css";
 
 function Job(props) {
   const clients = props.clients;
   if (clients.length === 0) {
     return (
       <Fragment>
-        <div>
-          <Row mb={[3, 4]}>
-            {props.company && <p>{props.company}</p>}
-            {props.role && <p>{props.role}</p>}
-            {props.date && <p>{props.date}</p>}
-          </Row>
+        <div className={styles.job}>
+          {props.company && <p>{props.company}</p>}
+          {props.role && <p>{props.role}</p>}
+          {props.date && <p>{props.date}</p>}
+
           <p>In-house</p>
         </div>
       </Fragment>
@@ -25,12 +20,10 @@ function Job(props) {
 
   return (
     <Fragment>
-      <div>
-        <Row mb={[3, 4]}>
-          {props.company && <p>{props.company}</p>}
-          {props.role && <p>{props.role}</p>}
-          {props.date && <p>{props.date}</p>}
-        </Row>
+      <div className={styles.job}>
+        {props.company && <p>{props.company}</p>}
+        {props.role && <p>{props.role}</p>}
+        {props.date && <p>{props.date}</p>}
 
         <p>Clients include:</p>
         {clients &&

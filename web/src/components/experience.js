@@ -1,15 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { space, typography, flexbox, layout, grid } from "styled-system";
 import Job from "./job";
 import styles from "./about.module.css";
-
-const Row = styled.div`
-  display: flex;
-  ${flexbox};
-  ${space};
-  ${layout};
-`;
 
 function Experience(props) {
   return (

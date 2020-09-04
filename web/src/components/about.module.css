@@ -26,7 +26,7 @@
 }
 
 .verticalDiv1 {
-  margin-right: 4em;
+  margin-right: 7em;
   @media (min-width: 450px) {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -56,6 +56,10 @@
 
 .listItem {
   min-width: fit-content;
-  margin-right: 4em;
+  margin-right: 6em;
   margin-bottom: 2em;
+}
+
+.job {
+  margin-bottom: 1em;
 }
