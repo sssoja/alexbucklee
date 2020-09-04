@@ -1,0 +1,62 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.wrapper {
+  display: flex;
+  text-align: justify;
+  font-size: 16px;
+  flex-direction: column;
+  @media (min-width: 450px) {
+    font-size: 20px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  @media (min-width: 450px) {
+    flex-direction: row;
+    margin-bottom: 6em;
+  }
+}
+
+.h1 {
+  margin-bottom: 1em;
+}
+
+.verticalDiv1 {
+  @media (min-width: 450px) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: 2em;
+  }
+}
+
+.verticalDiv2 {
+  @media (min-width: 450px) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: 4em;
+  }
+}
+
+.list {
+  flex-direction: column;
+  text-align: left;
+  display: flex;
+  @media (min-width: 450px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.listItem {
+  min-width: fit-content;
+  margin-right: 4em;
+  margin-bottom: 2em;
+}
