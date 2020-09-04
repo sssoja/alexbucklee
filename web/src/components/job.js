@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { style } from "styled-system";
 import styles from "./about.module.css";
 
 function Job(props) {
@@ -11,9 +10,8 @@ function Job(props) {
           {props.company && <p>{props.company}</p>}
           {props.role && <p>{props.role}</p>}
           {props.date && <p>{props.date}</p>}
-
-          <p>In-house</p>
         </div>
+        <p>In-house</p>
       </Fragment>
     );
   }
@@ -24,15 +22,14 @@ function Job(props) {
         {props.company && <p>{props.company}</p>}
         {props.role && <p>{props.role}</p>}
         {props.date && <p>{props.date}</p>}
-
-        <p>Clients include:</p>
-        {clients &&
-          clients.map(client => (
-            <ul key={client}>
-              <li>{client}</li>
-            </ul>
-          ))}
       </div>
+      <p> Clients include:</p>
+      {clients &&
+        clients.map(client => (
+          <ul key={client}>
+            <li>{client}</li>
+          </ul>
+        ))}
     </Fragment>
   );
 }
