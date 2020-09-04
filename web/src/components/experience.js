@@ -42,21 +42,21 @@ function Experience(props) {
   return (
     <Wrapper fontSize={fontSizes} lineHeight={1.5} textAlign="justify">
       <Column>
-        <Row flexDirection={["column", "row"]} mb={[2, 4]}>
+        <Row flexDirection={["column", "row"]} mb={3}>
           <Margin mb={2} mr="5em">
             <h1>Bio</h1>
           </Margin>
           <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
         </Row>
-        <Row flexDirection={["column", "row"]} mt={[8, 4]}>
+        <Row flexDirection={["column", "row"]} mt={4}>
           <Margin mb={2} mr={4}>
             <h1>Experience</h1>
           </Margin>
           <Row>
-            <List flexDirection={["column", null, null, "row"]} textAlign="left" maxWidth="80%">
+            <List flexDirection={["column", null, null, "row"]} textAlign="left">
               {props.nodes &&
                 props.nodes.map(node => (
-                  <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
+                  <ListItem key={node.id} minWidth="fit-content" mr={6} mb={3}>
                     <Job {...node} />
                   </ListItem>
                 ))}
