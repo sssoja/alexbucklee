@@ -29,6 +29,7 @@ const List = styled.ul`
   display: flex;
   ${typography};
   ${flexbox};
+  ${layout};
 `;
 
 const ListItem = styled.li`
@@ -47,12 +48,12 @@ function Experience(props) {
           </Margin>
           <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
         </Row>
-        <Row flexDirection={["column", "row"]} pt={4}>
+        <Row flexDirection={["column", "row"]} mt={[6, 4]}>
           <Margin mb={2} mr={4}>
             <h1>Experience</h1>
           </Margin>
           <Row>
-            <List flexDirection={["column", "row"]} textAlign="left">
+            <List flexDirection={["column", null, null, "row"]} textAlign="left" maxWidth="80%">
               {props.nodes &&
                 props.nodes.map(node => (
                   <ListItem key={node.id} minWidth="fit-content" mr={6} mb={4}>
