@@ -32,15 +32,13 @@ function Job(props) {
           {props.date && <p>{props.date}</p>}
         </Row>
 
-        <ul>
-          <p>Clients include:</p>
-          {props.clients &&
-            props.clients.map(client => (
-              <li key={props.id}>
-                <li>{client}</li>
-              </li>
-            ))}
-        </ul>
+        <p>Clients include:</p>
+        {clients &&
+          clients.map(client => (
+            <ul key={client}>
+              <li>{client}</li>
+            </ul>
+          ))}
       </div>
     </Fragment>
   );
