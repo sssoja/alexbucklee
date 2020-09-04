@@ -1,49 +1,31 @@
 import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
-import { flexbox, layout, typography, space, grid } from "styled-system";
-
-const HeaderWrapper = styled.header``;
-
-const NavMenu = styled.ul`
-  display: flex;
-  ${flexbox};
-  ${space};
-  ${typography};
-`;
-
-const Container = styled.div`
-  ${layout};
-  ${flexbox};
-  ${grid};
-`;
-
-const StyledLink = styled(Link)`
-  ${layout};
-  ${flexbox};
-  ${grid};
-`;
+import styles from "./header.module.css";
+import HamburgerIcon from "./icon/hamburger";
 
 const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <NavMenu flexDirection="row" justifyContent="space-between" fontSize={[2, 3]} pb={4}>
-      <Container width={["4em", "8em", "7em", "8em"]} display="block">
-        <StyledLink to="/">{siteTitle}</StyledLink>
-      </Container>
+  <div className={styles.wrapper}>
+    <div className={styles.logo}>
+      <Link to="/">{siteTitle}</Link>
+    </div>
+    <ul className={styles.nav}>
       <li>
-        <StyledLink to="/art/">Art</StyledLink>
+        <Link to="/art/">Art</Link>
       </li>
       <li>
-        <StyledLink to="/design/">Design</StyledLink>
+        <Link to="/design/">Design</Link>
       </li>
       <li>
-        <StyledLink to="/about/">About</StyledLink>
+        <Link to="/about/">About</Link>
       </li>
       <li>
-        <StyledLink to="/contact/">Contact</StyledLink>
+        <Link to="/contact/">Contact</Link>
       </li>
-    </NavMenu>
-  </HeaderWrapper>
+    </ul>
+    <i className={styles.icon}>
+      <HamburgerIcon />
+    </i>
+  </div>
 );
 
 export default Header;

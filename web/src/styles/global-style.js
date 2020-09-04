@@ -11,6 +11,7 @@ ${reset}
     background: blue;
     padding: 32px;
     margin: 0px;
+    line-height: 1.5;
   }
   a {
     text-decoration: none;
