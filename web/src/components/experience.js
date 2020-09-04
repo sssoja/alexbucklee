@@ -42,7 +42,7 @@ function Experience(props) {
   return (
     <Wrapper fontSize={fontSizes} lineHeight={1.5} textAlign="justify">
       <Column>
-        <Row flexDirection={["column", "row"]} mb={3}>
+        <Row flexDirection={["column", "row"]} mb={4}>
           <Margin mb={2} mr="5em">
             <h1>Bio</h1>
           </Margin>
