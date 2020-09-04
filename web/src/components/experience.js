@@ -42,13 +42,13 @@ function Experience(props) {
   return (
     <Wrapper fontSize={fontSizes} lineHeight={1.5} textAlign="justify">
       <Column>
-        <Row flexDirection={["column", "row"]} mb={[6, 6, 4, 4]}>
+        <Row flexDirection={["column", "row"]} mb={[6, 7, 4, 4]}>
           <Margin mb={2} mr="5em">
             <h1>Bio</h1>
           </Margin>
           <Row flexDirection="row"> {props.bio && <p>{props.bio}</p>}</Row>
         </Row>
-        <Row flexDirection={["column", "row"]} mt={[6, 6, 4, 4]}>
+        <Row flexDirection={["column", "row"]} mt={[6, 7, 4, 4]}>
           <Margin mb={2} mr={4}>
             <h1>Experience</h1>
           </Margin>
