@@ -22,5 +22,7 @@ ${reset}
   ul {
     margin: 0px;
     list-style-type: none;
+  } 
+  
 `;
 export default GlobalStyle;

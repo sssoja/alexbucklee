@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styles from "./header.module.css";
-import HamburgerIcon from "./icon/hamburger";
+import BurgerMenu from "./burger";
 
 const Header = ({ siteTitle }) => (
   <div className={styles.wrapper}>
@@ -22,9 +22,7 @@ const Header = ({ siteTitle }) => (
         <Link to="/contact/">Contact</Link>
       </li>
     </ul>
-    <i className={styles.icon}>
-      <HamburgerIcon />
-    </i>
+    <BurgerMenu />
   </div>
 );
 
