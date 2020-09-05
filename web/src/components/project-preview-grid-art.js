@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./project-preview-grid-art.module.css";
+import styles from "./project-preview-grid.module.css";
 import styled from "styled-components";
 import { space, typography, flexbox, layout, grid } from "styled-system";
 import ProjectPreviewArt from "./project-preview-art";
@@ -32,16 +32,15 @@ function ProjectPreviewGridArt(props) {
       gridTemplateColumns="15%"
       gridTemplateRows="90%"
       display={["flex", "grid"]}
-      flexDirection="column"
       className={styles.grid}
     >
-      <Column gridColumn={1} display="flex" flexDirection="column" mt={4} mr={4}>
+      <Column gridColumn={1} mt={4} mr={4}>
         <Row>{props.title && <h2>{props.title}</h2>}</Row>
       </Column>
 
       <Row gridColumn={2} className={styles.scroll} mt={4}>
         <Column className={styles.grid}>
-          <Column className={styles.grid} fontSize={5}>
+          <Column className={styles.grid}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (
