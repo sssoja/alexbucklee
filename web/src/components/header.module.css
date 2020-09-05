@@ -30,7 +30,6 @@
 
 .icon {
   display: block;
-  z-index: 1;
   @media screen and (min-width: 600px) {
     display: none;
   }
@@ -50,6 +49,8 @@
 .navMenu {
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
+  font-size: 2em;
   @media screen and (min-width: 600px) {
     display: none;
   }

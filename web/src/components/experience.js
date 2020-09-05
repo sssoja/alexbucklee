@@ -5,7 +5,7 @@ import styles from "./about.module.css";
 function Experience(props) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.row}>
+      <div className={styles.bio}>
         <h1 className={styles.h1}>Bio</h1>
         <div className={styles.verticalDiv1}></div>
         <div> {props.bio && <p>{props.bio}</p>}</div>

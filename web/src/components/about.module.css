@@ -6,9 +6,22 @@
   text-align: justify;
   font-size: 16px;
   flex-direction: column;
+  height: 80vh;
   @media (min-width: 450px) {
     font-size: 20px;
-    overflow: hidden;
+  }
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  overflow: visible;
+  @media (min-width: 600px) {
+    flex-direction: row;
+    margin-bottom: 6em;
+    margin-top: 0px;
+    overflow: visible;
   }
 }
 
@@ -16,10 +29,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2em;
-  @media (min-width: 800px) {
+  overflow: scroll;
+  @media (min-width: 600px) {
     flex-direction: row;
     margin-bottom: 6em;
     margin-top: 0px;
+    overflow: visible;
   }
 }
 
@@ -51,7 +66,7 @@
   flex-direction: column;
   text-align: left;
   display: flex;
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -65,4 +80,12 @@
 
 .job {
   margin-bottom: 1em;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
 }

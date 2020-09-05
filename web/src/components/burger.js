@@ -4,8 +4,6 @@ import styled, { css } from "styled-components";
 import styles from "./header.module.css";
 import HamburgerIcon from "./icon/hamburger";
 
-import { color, typography, position, grid } from "styled-system";
-
 const visibleStyles = css`
   display: flex;
   flex-direction: column;
@@ -19,7 +17,7 @@ const visibleStyles = css`
   opacity: 1;
   background-color: blue;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 `;
 
 const Overlay = styled.dialog`
@@ -36,19 +34,19 @@ const BurgerMenu = () => {
 
   const Links = [
     {
-      page: "art",
+      page: "Art",
       url: "/art/"
     },
     {
-      page: "design",
+      page: "Design",
       url: "/design/"
     },
     {
-      page: "about",
+      page: "About",
       url: "/about/"
     },
     {
-      page: "contact",
+      page: "Contact",
       url: "/contact/"
     }
   ];
