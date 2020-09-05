@@ -20,29 +20,19 @@
 }
 
 .nav {
-  display: flex;
-  width: 75%;
-  justify-content: space-between;
-  @media screen and (max-width: 600px) {
-    display: none;
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
   }
 }
 
 .icon {
-  display: none;
-  @media screen and (max-width: 600px) {
-    display: block;
-    z-index: 1;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .nav {
+  display: block;
+  z-index: 1;
+  @media screen and (min-width: 600px) {
     display: none;
-  }
-  .nav .icon {
-    float: right;
-    display: block;
   }
 }
 
@@ -52,11 +42,17 @@
   color: white;
   outline: none;
   cursor: pointer;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
 }
 
 .navMenu {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
 }
 
 /* .root {

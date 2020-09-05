@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
-import styles from "./project-preview-grid-art.module.css";
+import styles from "./project-preview-grid.module.css";
 import BlockText from "./block-text";
 
 function ProjectPreviewArt(props) {
