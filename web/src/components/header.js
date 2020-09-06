@@ -5,7 +5,6 @@ import BurgerMenu from "./burger";
 
 const Header = ({ siteTitle }) => (
   <div>
-    <BurgerMenu />
     <div className={styles.wrapper}>
       <div className={styles.logo}>
         <Link to="/">{siteTitle}</Link>
@@ -24,6 +23,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/contact/">Contact</Link>
         </li>
       </ul>
+      <BurgerMenu />
     </div>
   </div>
 );
