@@ -15,7 +15,7 @@ const visibleStyles = css`
   border: none;
   background-size: cover;
   opacity: 1;
-  background-color: black;
+  background-color: blue;
   top: 0;
   z-index: 1;
 `;
