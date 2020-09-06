@@ -11,13 +11,11 @@ const visibleStyles = css`
   width: 100%;
   justify-content: center;
   align-items: center;
-  text-align: center;
   border: none;
   background-size: cover;
   opacity: 1;
-  background-color: blue;
+  background-color: black;
   top: 0;
-  z-index: 1;
 `;
 
 const Overlay = styled.dialog`
@@ -54,7 +52,7 @@ const BurgerMenu = () => {
   return (
     <Fragment>
       <button className={styles.navButton}>
-        <i className={styles.icon} onClick={() => setIsOpen(!isOpen)}>
+        <i onClick={() => setIsOpen(!isOpen)}>
           <HamburgerIcon />
         </i>
       </button>
