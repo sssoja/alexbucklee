@@ -40,7 +40,7 @@ function ProjectPreviewGridArt(props) {
 
       <Row gridColumn={2} className={styles.scroll} mt={4}>
         <Column className={styles.grid}>
-          <Column className={styles.grid}>
+          <Column className={styles.grid} fontSize={5}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (

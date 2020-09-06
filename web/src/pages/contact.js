@@ -4,6 +4,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import styled from "styled-components";
 import { space, typography, layout, grid } from "styled-system";
+import styles from "../components/contact.module.css";
 
 const ListWrapper = styled.div`
   ${grid};
@@ -39,7 +40,7 @@ const ContactPage = props => {
           gridRowGap={1}
           gridColumnGap={4}
           maxWidth="55%"
-          fontSize={3}
+          className={styles.fontSizes}
         >
           <H1 gridColumn="1/3" mt={4} mb={3}>
             Let's chat...

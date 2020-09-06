@@ -18,6 +18,7 @@ const visibleStyles = css`
   background-color: blue;
   top: 0;
   z-index: 1;
+  overflow: hidden;
 `;
 
 const Overlay = styled.dialog`

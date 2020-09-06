@@ -1,6 +1,9 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 
-/* .fontSizes {
-  font-size: 20px;
-} */
+.fontSizes {
+  font-size: 16px;
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
+}

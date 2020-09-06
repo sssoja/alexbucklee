@@ -93,13 +93,7 @@ const DesignworkPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        {projectNodes && (
-          <ProjectPreviewGridDesign
-            title="Design works"
-            nodes={projectNodes}
-            browseMoreHref="/archive/"
-          />
-        )}
+        {projectNodes && <ProjectPreviewGridDesign title="Design works" nodes={projectNodes} />}
       </Container>
     </Layout>
   );

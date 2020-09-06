@@ -35,7 +35,7 @@ function ProjectPreviewGridDesign(props) {
       flexDirection="column"
       className={styles.grid}
     >
-      <Column gridColumn={1} display="flex" flexDirection="column" mt={4} mr={4}>
+      <Column gridColumn={1} mt={4} mr={4}>
         <Row>{props.title && <h2>{props.title}</h2>}</Row>
       </Column>
 
