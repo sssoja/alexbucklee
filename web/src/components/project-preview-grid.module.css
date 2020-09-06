@@ -2,12 +2,10 @@
 @import "../styles/custom-properties.css";
 
 .grid {
-  font-size: 16px;
   gap: 15px;
   flex-direction: column;
-  columns: auto;
-  @media (min-width: 450px) {
-    font-size: 20px;
+  font-size: 20px;
+  @media (min-width: 800px) {
     column-count: 2;
   }
 }
@@ -60,4 +58,11 @@
 
 .scroll::-webkit-scrollbar {
   display: none;
+}
+
+.fontSizes {
+  font-size: 16px;
+  @media (min-width: 800px) {
+    font-size: 20px;
+  }
 }

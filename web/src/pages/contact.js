@@ -39,7 +39,7 @@ const ContactPage = props => {
           gridRowGap={1}
           gridColumnGap={4}
           maxWidth="55%"
-          fontSize={[2, 3]}
+          fontSize={3}
         >
           <H1 gridColumn="1/3" mt={4} mb={3}>
             Let's chat...
