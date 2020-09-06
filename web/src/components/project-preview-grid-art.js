@@ -30,7 +30,7 @@ function ProjectPreviewGridArt(props) {
   return (
     <GridWrapper
       gridTemplateColumns="15%"
-      gridTemplateRows="90%"
+      gridTemplateRows="80%"
       display={["flex", "grid"]}
       className={styles.grid}
     >
@@ -54,7 +54,7 @@ function ProjectPreviewGridArt(props) {
       </Row>
 
       <Row display="contents">
-        <Row gridColumn={1} mt={4}>
+        <Row gridColumn={1} gridColumn="1/3" mt={4}>
           <h4>
             Purchase{" "}
             <a

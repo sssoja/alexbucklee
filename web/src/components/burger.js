@@ -7,15 +7,18 @@ import HamburgerIcon from "./icon/hamburger";
 const visibleStyles = css`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  position: absolute;
+  min-height: 110vh;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   background-size: cover;
   opacity: 1;
-  background-color: black;
+  background-color: blue;
   top: 0;
+  z-index: 1;
+  overflow: hidden;
 `;
 
 const Overlay = styled.dialog`

@@ -5,9 +5,10 @@
   font-size: 16px;
   gap: 15px;
   flex-direction: column;
+  columns: auto;
   @media (min-width: 450px) {
-    column-count: 2;
     font-size: 20px;
+    column-count: 2;
   }
 }
 
@@ -33,6 +34,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 16px;
 }
 
 .imgWrapper:hover .overlayWrapper {
