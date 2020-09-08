@@ -23,12 +23,17 @@ const Row = styled.div`
 
 function ProjectPreviewGridArt(props) {
   return (
-    <GridWrapper gridTemplateColumns="15%" display={["flex", "grid"]} className={styles.grid}>
-      <Column gridColumn={1} mt={4}>
+    <GridWrapper
+      gridTemplateColumns="15%"
+      gridTemplateRows="90%"
+      display={["flex", "grid"]}
+      className={styles.grid}
+    >
+      <Column gridColumn={1} mt={4} gridTemplateRows="90%" gridRow={1}>
         {props.title && <Row>{props.title}</Row>}
       </Column>
 
-      <Row gridColumn={2} className={styles.scroll} mt={4}>
+      <Row gridColumn={2} className={styles.scroll} mt={4} gridRow={1}>
         <Column className={styles.grid}>
           <Column className={styles.grid}>
             <ul>
@@ -43,20 +48,18 @@ function ProjectPreviewGridArt(props) {
         </Column>
       </Row>
 
-      <Row display="contents">
-        <Row gridColumn="1/3" mt={4}>
-          <h4>
-            Purchase{" "}
-            <a
-              href="https://fiftypoundland.bigcartel.com/products"
-              target="_blank"
-              style={{ textDecoration: "underline" }}
-              rel="noopener noreferrer"
-            >
-              here.
-            </a>
-          </h4>{" "}
-        </Row>
+      <Row mt={[4, "23em", "25em"]} gridColumn={1} gridRow={1}>
+        <h4>
+          Purchase{" "}
+          <a
+            href="https://fiftypoundland.bigcartel.com/products"
+            target="_blank"
+            style={{ textDecoration: "underline" }}
+            rel="noopener noreferrer"
+          >
+            here.
+          </a>
+        </h4>{" "}
       </Row>
     </GridWrapper>
   );
