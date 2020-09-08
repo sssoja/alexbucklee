@@ -8,7 +8,7 @@ const visibleStyles = css`
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 105vh;
+  height: 106vh;
   width: 100%;
   justify-content: center;
   align-items: center;
