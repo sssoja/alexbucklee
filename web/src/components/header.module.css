@@ -21,9 +21,8 @@
 
 .nav {
   display: none;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
   }
 }
@@ -38,7 +37,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
 }
@@ -49,6 +48,11 @@
   line-height: 1.5;
   font-size: 40px;
   text-align: center;
+}
+
+.li {
+  display: flex;
+  margin-left: 6em;
 }
 
 /* .root {

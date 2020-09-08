@@ -3,26 +3,40 @@ import React from "react";
 import styles from "./header.module.css";
 import BurgerMenu from "./burger";
 
+const Links = [
+  {
+    page: "Art",
+    url: "/art/"
+  },
+  {
+    page: "Design",
+    url: "/design/"
+  },
+  {
+    page: "About",
+    url: "/about/"
+  },
+  {
+    page: "Contact",
+    url: "/contact/"
+  }
+];
+
+const navLink = ({ page, url }) => {
+  return (
+    <li className={styles.li} key={page}>
+      <Link to={url}>{page}</Link>
+    </li>
+  );
+};
+
 const Header = ({ siteTitle }) => (
   <div>
     <div className={styles.wrapper}>
       <div className={styles.logo}>
         <Link to="/">{siteTitle}</Link>
       </div>
-      <ul className={styles.nav}>
-        <li>
-          <Link to="/art/">Art</Link>
-        </li>
-        <li>
-          <Link to="/design/">Design</Link>
-        </li>
-        <li>
-          <Link to="/about/">About</Link>
-        </li>
-        <li>
-          <Link to="/contact/">Contact</Link>
-        </li>
-      </ul>
+      <ul className={styles.nav}>{Links.map(navLink)}</ul>
       <BurgerMenu />
     </div>
   </div>

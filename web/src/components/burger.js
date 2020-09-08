@@ -26,6 +26,25 @@ const Overlay = styled.dialog`
   ${props => props.isOpen && visibleStyles}
 `;
 
+const Links = [
+  {
+    page: "Art",
+    url: "/art/"
+  },
+  {
+    page: "Design",
+    url: "/design/"
+  },
+  {
+    page: "About",
+    url: "/about/"
+  },
+  {
+    page: "Contact",
+    url: "/contact/"
+  }
+];
+
 const navLink = ({ page, url }) => {
   return (
     <div key={page}>
@@ -36,25 +55,6 @@ const navLink = ({ page, url }) => {
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const Links = [
-    {
-      page: "Art",
-      url: "/art/"
-    },
-    {
-      page: "Design",
-      url: "/design/"
-    },
-    {
-      page: "About",
-      url: "/about/"
-    },
-    {
-      page: "Contact",
-      url: "/contact/"
-    }
-  ];
 
   return (
     <Fragment>
