@@ -35,7 +35,7 @@
 }
 
 .verticalDiv1 {
-  margin-right: 7em;
+  margin-right: 9em;
   @media (min-width: 450px) {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -45,7 +45,13 @@
 }
 
 .verticalDiv2 {
-  margin-right: 4em;
+  margin-right: 5.5em;
+  @media (min-width: 450px) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
   @media (min-width: 450px) {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);

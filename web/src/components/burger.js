@@ -27,7 +27,11 @@ const Overlay = styled.dialog`
 `;
 
 const navLink = ({ page, url }) => {
-  return <Link to={url}>{page}</Link>;
+  return (
+    <div key={page}>
+      <Link to={url}>{page}</Link>
+    </div>
+  );
 };
 
 const BurgerMenu = () => {

@@ -34,33 +34,34 @@ const ContactPage = props => {
   return (
     <Layout>
       <Container>
-        <ListWrapper
-          display="grid"
-          gridTemplateRows="1f, 1fr, 1fr, 1fr"
-          gridRowGap={1}
-          gridColumnGap={4}
-          maxWidth="55%"
-          className={styles.fontSizes}
-        >
-          <H1 gridColumn="1/3" mt={4} mb={3}>
-            Let's chat...
-          </H1>
+        <div className={styles.wrapper}>
+          <h1 className={styles.h1}>Let's chat...</h1>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <p>Email </p>
+              <p>Mobile</p>
+              <p>Instagram</p>
+            </div>
 
-          <ContactInfo gridRow={2}>Email </ContactInfo>
-          <ContactInfo gridRow={2}>
-            <a href="mailto:alexbucklee@gmail.com" target="_blank">
-              abuckleeuk@gmail.com
-            </a>
-          </ContactInfo>
-          <ContactInfo gridRow={3}>Mobile</ContactInfo>
-          <ContactInfo gridRow={3}>+44 7768 619 885</ContactInfo>
-          <ContactInfo gridRow={4}>Instagram</ContactInfo>
-          <ContactInfo gridRow={4}>
-            <a href="https://www.instagram.com/alexbucklee/" target="_blank">
-              @alexbucklee
-            </a>
-          </ContactInfo>
-        </ListWrapper>
+            <div className={styles.column}>
+              <p>
+                <a href="mailto:alexbucklee@gmail.com" target="_blank" rel="noopener noreferrer">
+                  abuckleeuk@gmail.com
+                </a>
+              </p>
+              <p>+44 7768 619 885</p>
+              <p>
+                <a
+                  href="https://www.instagram.com/alexbucklee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @alexbucklee
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </Container>
     </Layout>
   );

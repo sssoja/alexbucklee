@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./project-preview-grid.module.css";
 import styled from "styled-components";
-import { space, typography, flexbox, layout, grid } from "styled-system";
+import { space, layout, grid } from "styled-system";
 import ProjectPreviewDesign from "./project-preview-design";
+import { Link } from "gatsby";
 
 const GridWrapper = styled.div`
   height: 80vh;
-  ${typography};
-  ${flexbox};
   ${layout};
   ${grid};
 `;
@@ -15,33 +14,24 @@ const GridWrapper = styled.div`
 const Column = styled.div`
   ${grid};
   ${space};
-  ${layout};
-  ${flexbox};
 `;
 
 const Row = styled.div`
   ${grid};
   ${space};
   ${layout};
-  ${flexbox};
 `;
 
 function ProjectPreviewGridDesign(props) {
   return (
-    <GridWrapper
-      gridTemplateColumns="15%"
-      gridTemplateRows="90%"
-      display={["flex", "grid"]}
-      flexDirection="column"
-      className={styles.grid}
-    >
-      <Column gridColumn={1} mt={4} mr={4}>
-        <Row>{props.title && <h2>{props.title}</h2>}</Row>
+    <GridWrapper gridTemplateColumns="15%" display={["flex", "grid"]} className={styles.grid}>
+      <Column gridColumn={1} mt={4}>
+        {props.title && <Row>{props.title}</Row>}
       </Column>
 
       <Row gridColumn={2} className={styles.scroll} mt={4}>
         <Column className={styles.grid}>
-          <Column className={styles.grid} fontSize={5}>
+          <Column className={styles.grid}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (
@@ -52,6 +42,12 @@ function ProjectPreviewGridDesign(props) {
             </ul>
           </Column>
         </Column>
+      </Row>
+
+      <Row display="contents">
+        <Row gridColumn="1/3" mt={4}>
+          <Link to="/contact/"> Discuss a project. </Link>
+        </Row>
       </Row>
     </GridWrapper>
   );

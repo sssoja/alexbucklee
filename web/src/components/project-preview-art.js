@@ -32,18 +32,20 @@ function ProjectPreviewArt(props) {
   }
   return (
     <Fragment>
-      <div className={styles.imgWrapper}>
-        {props.mainImage && props.mainImage.asset && (
-          <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
-        )}
-
-        <div className={styles.overlayWrapper}>
-          <h3>{props.title}</h3>
-          {props._rawExcerpt && (
-            <div>
-              <BlockText blocks={props._rawExcerpt} />
-            </div>
+      <div>
+        <div className={styles.imgWrapper}>
+          {props.mainImage && props.mainImage.asset && (
+            <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
           )}
+
+          <div className={styles.overlayWrapper}>
+            <h3>{props.title}</h3>
+            {props._rawExcerpt && (
+              <div>
+                <BlockText blocks={props._rawExcerpt} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </Fragment>
