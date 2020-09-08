@@ -44,10 +44,8 @@ function ProjectPreviewGridDesign(props) {
         </Column>
       </Row>
 
-      <Row display="contents">
-        <Row gridColumn="1/3" mt={4}>
-          <Link to="/contact/"> Discuss a project. </Link>
-        </Row>
+      <Row gridColumn="1/3" mt={4}>
+        <Link to="/contact/">Discuss a project</Link>
       </Row>
     </GridWrapper>
   );
