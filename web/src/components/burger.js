@@ -8,7 +8,7 @@ const visibleStyles = css`
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 100vh;
+  height: 107vh;
   width: 100%;
   justify-content: center;
   align-items: flex-start;
@@ -20,9 +20,8 @@ const visibleStyles = css`
   top: 0;
   z-index: 1;
   overflow: hidden;
-
   line-height: 1.5;
-  font-size: 1.5em;
+  font-size: 1.2em;
 `;
 
 const Overlay = styled.dialog`
