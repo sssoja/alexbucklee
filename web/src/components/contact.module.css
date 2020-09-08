@@ -22,5 +22,8 @@
 
 .column {
   flex-direction: column;
-  margin-right: 6em;
+  margin-right: 1em;
+  @media (min-width: 600px) {
+    margin-right: 6em;
+  }
 }

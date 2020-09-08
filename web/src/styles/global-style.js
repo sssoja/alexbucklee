@@ -7,6 +7,8 @@ ${reset}
   body {
     font-family: "Helvetica Neue";
     text-decoration: none;
+    height: 100vh; 
+    width: 100%;
     color: ${theme.colors.athensGray};
     background: blue;
     padding: 32px;
