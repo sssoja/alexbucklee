@@ -23,7 +23,11 @@ const Row = styled.div`
 
 function ProjectPreviewGridArt(props) {
   return (
-    <GridWrapper gridTemplateColumns="15%" display={["flex", "grid"]} className={styles.grid}>
+    <GridWrapper
+      gridTemplateColumns="15%"
+      display={["flex", null, null, "grid"]}
+      className={styles.grid}
+    >
       <Column gridColumn={1} mt={4}>
         {props.title && <Row>{props.title}</Row>}
       </Column>
