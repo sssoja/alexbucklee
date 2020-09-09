@@ -43,7 +43,7 @@ function ProjectPreviewGridArt(props) {
         </Column>
       </Row>
 
-      <Row gridColumn="1/3" mt={4}>
+      <Row gridColumn="1/3" mt={[4, 0]}>
         <h4>
           Purchase{" "}
           <a
