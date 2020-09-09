@@ -8,18 +8,12 @@ import {
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import ProjectPreviewGridDesign from "../components/project-preview-grid-design";
-import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
 export const query = graphql`
   query DesignPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
     projects: allSanityDesign(
-      limit: 12
+      limit: 20
       sort: { fields: [publishedAt], order: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
@@ -76,22 +70,14 @@ const DesignworkPage = props => {
     );
   }
 
-  const site = (data || {}).site;
   const projectNodes = (data || {}).projects
     ? mapEdgesToNodes(data.projects)
         .filter(filterOutDocsWithoutSlugs)
         .filter(filterOutDocsPublishedInTheFuture)
     : [];
 
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    );
-  }
-
   return (
     <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         {projectNodes && <ProjectPreviewGridDesign title="Design works" nodes={projectNodes} />}
       </Container>
