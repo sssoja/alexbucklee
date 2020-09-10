@@ -32,42 +32,9 @@ export default {
       type: "simplePortableText"
     },
     {
-      name: "members",
-      title: "Members",
-      type: "array",
-      of: [{ type: "projectMember" }]
-    },
-    {
-      name: "startedAt",
-      title: "Started at",
-      type: "datetime"
-    },
-    {
-      name: "endedAt",
-      title: "Ended at",
-      type: "datetime"
-    },
-    {
       name: "mainImage",
       title: "Main image",
       type: "figure"
-    },
-    {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [{ type: "reference", to: { type: "category" } }]
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "projectPortableText"
-    },
-    {
-      name: "relatedProjects",
-      title: "Related projects",
-      type: "array",
-      of: [{ type: "reference", to: { type: "sampleProject" } }]
     }
   ],
   preview: {
