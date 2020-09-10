@@ -9,5 +9,10 @@ export default {
       type: "text",
       title: "Bio"
     }
+    // {
+    //   name: "title",
+    //   title: "Title",
+    //   type: "string"
+    // },
   ]
 };
