@@ -4,10 +4,7 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
-import styled from "styled-components";
-import { typography } from "styled-system";
-import styles from "../components/index.module.css";
-import gif from "../components/assets/works1.gif";
+import Window from "../components/window";
 
 export const query = graphql`
   query IndexPageQuery {
@@ -19,13 +16,8 @@ export const query = graphql`
   }
 `;
 
-const Wrapper = styled.div`
-  ${typography};
-`;
-
 const IndexPage = props => {
   const { data, errors } = props;
-  const fontSizes = [3, 4, 5, 6];
 
   if (errors) {
     return (
@@ -45,16 +37,9 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <Wrapper fontSize={fontSizes} className={styles.wrapper}>
-          <Wrapper className={styles.wrapper}>
-            <h1 className={styles.h1}>WINDOW OF OPPORTUNITY</h1>
-            <div className={styles.gifWrapper}>
-              <img className={styles.gif} src={gif} />
-            </div>
-          </Wrapper>
-        </Wrapper>
+        <SEO title={site.title} description={site.description} keywords={site.keywords} />
+        <Window />
       </Container>
     </Layout>
   );

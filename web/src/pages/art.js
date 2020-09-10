@@ -64,9 +64,9 @@ const ArtworkPage = props => {
 
   if (errors) {
     return (
-      <Layout>
+      <Container>
         <GraphQLErrorList errors={errors} />
-      </Layout>
+      </Container>
     );
   }
 

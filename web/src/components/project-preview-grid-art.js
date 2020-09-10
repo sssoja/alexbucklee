@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./project-preview-grid.module.css";
 import styled from "styled-components";
-import { space, layout, grid } from "styled-system";
+import { space, layout, grid, flexbox } from "styled-system";
 import ProjectPreviewArt from "./project-preview-art";
 
 const GridWrapper = styled.div`
   height: 80vh;
   ${layout};
   ${grid};
+  ${flexbox};
 `;
 
 const Column = styled.div`
@@ -25,16 +26,16 @@ function ProjectPreviewGridArt(props) {
   return (
     <GridWrapper
       gridTemplateColumns="15%"
-      display={["flex", null, null, "grid"]}
-      className={styles.grid}
+      display={["flex", "flex", "grid", "grid"]}
+      flexDirection="column"
     >
-      <Column gridColumn={1} mt={4}>
+      <Column gridColumn={1} mt={4} mr={4}>
         {props.title && <Row>{props.title}</Row>}
       </Column>
 
-      <Row gridColumn={2} className={styles.scroll} mt={4}>
-        <Column className={styles.grid}>
-          <Column className={styles.grid}>
+      <Row gridColumn={2} mt={4} className={styles.scroll}>
+        <div className={styles.grid}>
+          <div className={styles.grid}>
             <ul>
               {props.nodes &&
                 props.nodes.map(node => (
@@ -43,11 +44,11 @@ function ProjectPreviewGridArt(props) {
                   </li>
                 ))}
             </ul>
-          </Column>
-        </Column>
+          </div>
+        </div>
       </Row>
 
-      <Row gridColumn="1/3" mt={[4, 0]}>
+      <Row gridColumn="1/3" mt={4}>
         <h4>
           Purchase{" "}
           <a
