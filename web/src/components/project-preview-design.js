@@ -9,41 +9,21 @@ function ProjectPreviewDesign(props) {
   const width = props.mainImage.asset.metadata.dimensions.width;
   const isLandscape = width > height;
 
-  if (isLandscape) {
-    return (
-      <Fragment>
-        <div className={styles.landscape}>
-          <div className={styles.imgWrapper}>
-            {props.mainImage && props.mainImage.asset && (
-              <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
-            )}
-            <div className={styles.overlayWrapper}>
-              <h3>{props.title}</h3>
-              {props._rawExcerpt && (
-                <div>
-                  <BlockText blocks={props._rawExcerpt} />
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </Fragment>
-    );
-  }
   return (
     <Fragment>
-      <div className={styles.imgWrapper}>
-        {props.mainImage && props.mainImage.asset && (
-          <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
-        )}
-
-        <div className={styles.overlayWrapper}>
-          <h3>{props.title}</h3>
-          {props._rawExcerpt && (
-            <div>
-              <BlockText blocks={props._rawExcerpt} />
-            </div>
+      <div className={isLandscape ? styles.landscape : null}>
+        <div className={styles.imgWrapper}>
+          {props.mainImage && props.mainImage.asset && (
+            <img src={imageUrlFor(buildImageObj(props.mainImage))} alt={props.mainImage.alt} />
           )}
+          <div className={styles.overlayWrapper}>
+            <h3>{props.title}</h3>
+            {props._rawExcerpt && (
+              <div>
+                <BlockText blocks={props._rawExcerpt} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </Fragment>

@@ -1,20 +1,13 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
+import Header from "./header";
 import GlobalStyle from "../styles/global-style";
 
-const Header = lazy(() => import("./header"));
-
-const Layout = ({ siteTitle, children }) => (
+const Layout = ({ children, siteTitle }) => (
   <>
-    {" "}
-    <Suspense fallback={<div>Loading</div>}>
-      <GlobalStyle />
-      <Header siteTitle={siteTitle} />
-
-      <Suspense fallback={<div>Loading</div>}>
-        <div>{children}</div>
-      </Suspense>
-      <footer />
-    </Suspense>
+    <GlobalStyle />
+    <Header siteTitle={siteTitle} />
+    <div>{children}</div>
+    <footer />
   </>
 );
 
