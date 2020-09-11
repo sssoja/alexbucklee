@@ -18,6 +18,9 @@ ${reset}
     padding: 32px;
     margin: 0px;
     line-height: 1.5;
+    font-size: 16px;
+  @media (min-width: 600px) {
+    font-size: 20px;
   }
   #root {
     height: 100%;
