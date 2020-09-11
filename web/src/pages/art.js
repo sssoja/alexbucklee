@@ -14,7 +14,7 @@ export const query = graphql`
   query ArtPageQuery {
     projects: allSanityArt(
       limit: 100
-      sort: { fields: [publishedAt], order: DESC }
+      sort: { fields: [publishedAt], order: ASC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {
