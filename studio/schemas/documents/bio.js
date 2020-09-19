@@ -8,11 +8,6 @@ export default {
       name: "bio",
       type: "text",
       title: "Bio"
-    },
-    {
-      name: "title",
-      title: "Title",
-      type: "string"
     }
   ]
 };
